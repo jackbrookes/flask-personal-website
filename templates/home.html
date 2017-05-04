@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Homepage{% endblock %}
+{% block content %}
+  <h1>Index</h1>
+  <p class="important">
+    Welcome on my awesome homepage.
+  </p>
+
+  <h2>Posts</h2>
+  <p>
+  {% for post in posts %}
+      <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
+          {{ post.title }}
+      </a>
+      <small>{{ post.date }}</small>
+  {% endfor %}
+  </p>
+
+{% endblock %}

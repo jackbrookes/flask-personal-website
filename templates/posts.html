@@ -1,0 +1,6 @@
+{% for post in posts %}
+    <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
+        {{ post.title }}
+    </a>
+    <small>{{ post.date }}</small>
+{% endfor %}
