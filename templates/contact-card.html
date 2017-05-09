@@ -1,0 +1,27 @@
+<div class="card">
+  <h2 class="section-title">
+    {% if current_page == "Contact"%}
+      Contact
+    {% else %}
+      <a href="{{ url_for('contact')}}">Contact</a>
+    {% endif %}
+  </h2>
+
+  <p>
+    <ul class="tags">
+
+      {% with tag="Twitter", url="http://twitter.com/jackbrookes" %}
+        {% include 'tag.html' %}
+      {% endwith %}
+
+      {% with tag="Twitter"%}
+        {% include 'tag.html' %}
+      {% endwith %}
+
+      {% with tag="Long name test", url="http://twitter.com/jackbrookes"%}
+        {% include 'tag.html' %}
+      {% endwith %}
+
+    </ul>
+  </p>
+</div>

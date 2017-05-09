@@ -1,17 +1,52 @@
 <!doctype html>
 <html>
   <head>
+
     {% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,400,700|Roboto:400" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
     <title>{% block title %}{% endblock %} - My Webpage</title>
+
     {% endblock %}
   </head>
   <body>
-    <div id="content">{% block content %}{% endblock %}</div>
-    <div id="footer">
-      {% block footer %}
-      &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
-      {% endblock %}
+    <div id="centred-container">
+      <ul id="navbar">
+        <li class="navbutton"><a href="{{url_for('home')}}" {% if current_page == 'Home' %}class="current"{% endif %}>Home</a></li>
+        <li class="navbutton"><a href="{{url_for('projects')}}" {% if current_page == 'Projects' %}class="current"{% endif %}>Projects</a></li>
+        <li class="navbutton"><a href="{{url_for('contact')}}" {% if current_page == 'Contact' %}class="current"{% endif %}>Contact</a></li>
+        <li id="spacer">&nbsp;</li>
+      </ul>
+      <div id="content">
+        {% block content %}{% endblock %}
+      </div>
+
     </div>
+    <div id="footer-container">
+      <div id="footer">
+        {% block footer %}
+        <ul class="footer-ul">
+          <li style="color: #8AB3CF">© Jack Brookes 2017</li>
+          <li><a href="{{url_for('home')}}">Home</a></li>
+          <li><a href="{{url_for('projects')}}">Projects</a></li>
+          <li><a href="{{url_for('contact')}}">Contact</a></li>
+          <li><a onclick="topFunction()" style="cursor:pointer">Back to top</a></li>
+        </ul>
+        {% endblock %}
+      </div>
+    </div>
+
+    <script>
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+
   </body>
 </html>
