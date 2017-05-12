@@ -1,7 +1,11 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+img_gen/
 *.py[cod]
 *$py.class
+
+# secret
+private_config.py
 
 # C extensions
 *.so
@@ -87,12 +91,12 @@ celerybeat-schedule
 venv/
 ENV/
 
-# Spyder project settings
-.spyderproject
-.spyproject
+# Spyder post settings
+.spyderpost
+.spypost
 
-# Rope project settings
-.ropeproject
+# Rope post settings
+.ropepost
 
 # mkdocs documentation
 /site

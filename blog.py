@@ -1,38 +1,54 @@
 import sys
 import os
-from flask import Flask, render_template, render_template_string, Markup, current_app, \
+import datetime
+import json
+from flask import Flask, render_template, render_template_string,\
+                  Markup, current_app, \
                   url_for
-from flask_flatpages import FlatPages, pygmented_markdown, pygments_style_defs
-from codecs import encode as codec_encode
+from flask_flatpages import FlatPages, pygments_style_defs
+from flask_flatpages.utils import pygmented_markdown
 
-DEBUG = True
-FLATPAGES_AUTO_RELOAD = DEBUG
-FLATPAGES_EXTENSION = '.md'
-FLATPAGES_ROOT = 'content'
+
 POST_DIR = 'posts'
-PROJECT_DIR = 'projects'
-
 app = Flask(__name__)
+app.config.from_object('config')
 flatpages = FlatPages(app)
-app.config.from_object(__name__)
+
+with open('tagmap.json') as json_data:
+    tag_map = json.load(json_data)
 
 # custom jinja functions
+@app.context_processor
+def utility_processor():
+    def url_for_tag(tag):
+        icon_str= 'icons/{}.png'
+        filepath = icon_str.format(tag.replace(' ', '_').lower())
+        if os.path.isfile(os.path.join('static', filepath)):
+            url = url_for('static', filename = filepath)
+            return url
+        else:
+            defpath = icon_str.format('default')
+            url = url_for('static', filename = defpath)
+            return url
 
-def url_for_tag(tag, rot13 = False):
-    """
-    Checks if icon for tag exists, if not, serve default icon url
-    """
-    icon_str= 'icons/{}.png'
-    filepath = icon_str.format(tag.replace(' ', '_').lower())
-    if os.path.isfile(os.path.join('static', filepath)):
-        url = url_for('static', filename=filepath)
-        return codec_encode(url, 'rot_13') if rot13 else url
-    else:
-        defpath = icon_str.format('default')
-        url = url_for('static', filename=defpath)
-        return codec_encode(url, 'rot_13') if rot13 else url
+    year = datetime.datetime.now().strftime('%Y')
 
-app.jinja_env.globals.update(url_for_tag=url_for_tag)
+    def get_tag_property(tagname, property):
+        if tagname in tag_map:
+            if property in tag_map[tagname]:
+                return tag_map[tagname][property]
+            else:
+                return ""
+        else:
+            if property in tag_map['default']:
+                return tag_map['default'][property]
+            else:
+                return ""
+
+
+    return dict(url_for_tag = url_for_tag,
+                year = year,
+                get_tag_property = get_tag_property)
 
 @app.route('/pygments.css')
 def pygments_css():
@@ -46,34 +62,56 @@ app.config['FLATPAGES_HTML_RENDERER'] = prerender_jinja
 
 @app.route("/")
 def home():
-    projects = get_projects()
-    return render_template('home.html', projects=projects, current_page='Home')
+    posts = get_posts(6, pinned_only = True)
+    return render_template('home.html',
+                           posts = posts,
+                           current_page='Home')
 
-@app.route("/projects/")
-def projects():
-    projects = get_projects()
-    return render_template('projects.html',
-                           projects=projects,
-                           current_page='Projects')
+@app.route("/me/")
+def me():
+    return render_template('me.html')
 
-@app.route('/projects/<name>/')
-def project(name):
-    path = '{}/{}'.format(PROJECT_DIR, name)
+@app.route("/posts/", defaults={'pagenum': 1})
+@app.route("/posts/page/<pagenum>/")
+def posts(pagenum):
+    posts = get_posts(8, page = int(pagenum))
+    return render_template('posts.html',
+                           posts=posts,
+                           current_page='Posts')
+
+@app.route('/posts/<name>/')
+def post(name):
+    path = '{}/{}'.format(POST_DIR, name)
     print(path)
-    project = flatpages.get_or_404(path)
-    return render_template('project.html',
-                           project=project,
-                           current_page='Projects')
+    post = flatpages.get_or_404(path)
+    return render_template('post.html',
+                           post=post,
+                           current_page='Posts')
 
 @app.route('/contact/')
 def contact():
     return render_template('contact.html',
                            current_page='Contact')
 
-def get_projects():
-    projects = [p for p in flatpages if p.path.startswith(PROJECT_DIR)]
-    projects.sort(key=lambda item:item['date'], reverse=False)
-    return projects
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
+def get_posts(limit, pinned_only = False, page = 1):
+    posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
+    for f in flatpages:
+        print(f.path)
+    if pinned_only:
+        posts = [p for p in posts if 'pin_rank' in p.meta]
+        posts.sort(key=lambda item:item['pin_rank'], reverse=True)
+    else:
+        posts.sort(key=lambda item:item['date'], reverse=False)
+    first = (page - 1) * limit
+    last = first + limit
+    posts = posts[first:last]
+    return posts
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug = True)

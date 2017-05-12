@@ -3,12 +3,13 @@
   <head>
 
     {% block head %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='me_circ.png') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,400,700|Roboto:400" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,400i|Roboto:400" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
-    <title>{% block title %}{% endblock %} - My Webpage</title>
+    <title>{% block title %}{% endblock %} - Jack Brookes</title>
 
     {% endblock %}
   </head>
@@ -16,7 +17,7 @@
     <div id="centred-container">
       <ul id="navbar">
         <li class="navbutton"><a href="{{url_for('home')}}" {% if current_page == 'Home' %}class="current"{% endif %}>Home</a></li>
-        <li class="navbutton"><a href="{{url_for('projects')}}" {% if current_page == 'Projects' %}class="current"{% endif %}>Projects</a></li>
+        <li class="navbutton"><a href="{{url_for('posts')}}" {% if current_page == 'Posts' %}class="current"{% endif %}>Posts</a></li>
         <li class="navbutton"><a href="{{url_for('contact')}}" {% if current_page == 'Contact' %}class="current"{% endif %}>Contact</a></li>
         <li id="spacer">&nbsp;</li>
       </ul>
@@ -29,11 +30,11 @@
       <div id="footer">
         {% block footer %}
         <ul class="footer-ul">
-          <li style="color: #8AB3CF">© Jack Brookes 2017</li>
+          <li style="color: #8AB3CF; margin-bottom: 5px;">© Jack Brookes {{ year }}</li>
           <li><a href="{{url_for('home')}}">Home</a></li>
-          <li><a href="{{url_for('projects')}}">Projects</a></li>
+          <li><a href="{{url_for('posts')}}">posts</a></li>
           <li><a href="{{url_for('contact')}}">Contact</a></li>
-          <li><a onclick="topFunction()" style="cursor:pointer">Back to top</a></li>
+          <li><a onclick="topFunction()" style="cursor:pointer">Back to top <i class="fa fa-fw fa-chevron-up" aria-hidden="true"></i></a></li>
         </ul>
         {% endblock %}
       </div>

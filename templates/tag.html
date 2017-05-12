@@ -1,8 +1,8 @@
-{% if url %}<a href={{ url }}>{% endif %}
 <li>
-  <span {% if url %}class="has-url"{% endif %}>
-    <img class="tag-icon" src="{{ url_for_tag( tag ) }}" />
-    <span>{{ tag }}</span>
-  </span>
+    <span class="tag">
+      <i class="fa fa-{{ get_tag_property(name, 'icon') }} fa-fw"
+      style="color:#{{ get_tag_property(name, 'color') }}"
+      aria-hidden="true"></i>
+      {{ name }}
+    </span>
 </li>
-{% if url %}</a>{% endif %}

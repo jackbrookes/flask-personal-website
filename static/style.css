@@ -4,6 +4,8 @@
   -webkit-box-sizing: border-box;
 }
 
+html {overflow-y: scroll}
+
 html, body { margin: 0; padding: 0; height: 100%;}
 
 body {
@@ -20,10 +22,6 @@ a:visited, a:link{
   color: inherit;
 }
 
-h1#profile-card-name, h2#profile-card-subtitle{
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-}
 
 ul#navbar {
   list-style-type: none;
@@ -69,10 +67,8 @@ li.navbutton a:hover{
 }
 
 #profile-card-container{
-  overflow:auto;
-  margin: 10px auto 15px auto;
-  padding: 10px 0;
-  max-width: 400px;
+  margin: 20px auto 15px auto;
+  max-width: 370px;
 }
 
 img.profile-card-pic{
@@ -82,15 +78,21 @@ img.profile-card-pic{
 
 #profile-card-infobox{
   overflow: hidden;
-  padding: 10px 20px;
+  padding: 10px 15px;
 }
 
-h1#profile-card-name{
+.profile-card-name, .profile-card-subtitle{
+  font-weight: 700;
+}
+
+.profile-card-name{
   margin: 6px 0;
+  font-size: 32px;
 }
 
-h2#profile-card-subtitle{
+.profile-card-subtitle{
   margin: 7px 0;
+  font-size: 24px;
 }
 
 
@@ -104,7 +106,7 @@ h2#profile-card-subtitle{
 
 #content{
   overflow:auto;
-  padding-bottom: 20px;
+  padding-bottom: 20px;W
 }
 
 #content p, #content .card p{
@@ -115,15 +117,20 @@ h2#profile-card-subtitle{
 #content p img {
   max-width:100%;
   max-height:1500px;
+  margin: auto;
+  display: block;
 }
 
-.project{
+.post{
   text-decoration: none;
+  height: 19px;
+  display: block;
+  overflow: hidden;
 }
 
 .card{
   elementoverflow: hidden;
-  padding: 10px 0 15px 0;
+  padding: 10px 0 25px 0;
 }
 
 .cf:before,
@@ -144,53 +151,73 @@ h2#profile-card-subtitle{
   *zoom: 1;
 }
 
-h2.section-title{
-  margin: 12px 0 18px 0;
+h2 {
+  margin: 10px 0 24px 0;
+  padding-bottom: 6px;
+  border-bottom: solid 1px #f0f0f0;
 }
 
-h2.section-title a{
+h2 a{
   color: inherit;
   text-decoration: none;
 }
 
-h2.section-title a:after{
+/*h2.section-title a:after{
   font-size: 20px;
   padding-left: 9px;
   content: ">";
   font-weight: 300;
   color: #ccc;
-}
+}*/
 
 
-ul.tags{
+ul.tags, ul.contact{
   list-style-type: none;
   padding: 0;
   margin: 0;
   font-weight: 700;
 }
 
+ul.contact li{
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+ul.contact li a{
+  text-decoration: none;
+}
+
 ul.tags li{
+  /*display: inline-block;*/
   margin: 1px 0;
   font-size: 14px;
 }
 
-ul.fade li a span{
-  opacity: 0.7;
+h2.techused{
+  font-size: 16px;
+  margin: 0 0 7px 0;
+}
+
+.techbox{
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin: 25px 0;
+}
+
+.techbox ul li{
+  float: left;
+  margin-right: 9px;
 }
 
 ul.horizontal{
-  margin-top: 4px;
-  bottom: 10px;
-  position: absolute;
-  width: 100%;
+  height: 25px;
+  min-width: 100%;
+  overflow: hidden;
 }
 
 ul.horizontal li{
   float: left;
-}
-
-ul.horizontal li:not(:first-child){
-  margin-left: 9px;
+  margin-right: 9px;
 }
 
 ul.tags a{
@@ -203,21 +230,9 @@ ul.tags li a {
   color: #111;
 }
 
-ul.tags li .has-url:hover {
-  color: #4180AB;
-}
 ul.tags li span{
   vertical-align: middle;
 }
-
-ul.tags li .has-url span:after{
-  font-size: 14px;
-  padding-left: 5px;
-  content: ">";
-  font-weight: 400;
-  color: ccc;
-}
-
 
 img.tag-icon{
   vertical-align: middle;
@@ -227,35 +242,64 @@ img.tag-icon{
   overflow: hidden;
 }
 
-.project-card{
-    position: relative;
-    width: calc(50% - 5px);
-    float: left;
-    background-color: #E4EBF0;
-    padding: 14px 12px 30px 12px;
-    margin: 5px 0;
-    height: 140px;
+.post-card{
+  width: calc(50% - 5px);
+  float: left;
+  background-color: #E4EBF0;
+  padding: 14px 12px 30px 12px;
+  margin: 5px 0;
+  height: 145px;
 }
 
-.project-card:hover{
+.post-card:hover{
   border-bottom: solid #4180AB 4px;
   padding-bottom: 10px;
   transition: all .15s ease-in-out;
 }
 
-a:nth-of-type(2n+1) .project-card{
+a:nth-of-type(2n+1) .post-card{
   margin-left: 0;
   margin-right: 5px;
 }
-a:nth-of-type(2n) .project-card{
+a:nth-of-type(2n) .post-card{
   margin-left: 5px;
   margin-right: 0;
 }
 
+h1.title{
+  margin: 15px 0;
+}
+
 p.small{
   font-size: 13px !important;
-  height: 55px;
-  overflow: hidden;
+  height: 50px;
+  overflow:hidden;
+}
+
+p.summary{
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+a.github{
+  font-size: 0.9em;
+  display: inline-block;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+}
+
+a.github:hover{
+  color: #4180AB;
+}
+
+.arrow:after, a.arrow::after{
+  padding-left: 0.3em;
+  font-size: 0.8em;
+  content: ">";
+  opacity: 0.7;
 }
 
 #footer-container{
@@ -308,12 +352,17 @@ ul.footer-ul li a:hover{
     font-size: 16px;
   }
 
-  .project-card{
+  .post-card{
     width: calc(100% - 10px);
   }
 
 
-  a:nth-of-type(2n) .project-card, a:nth-of-type(2n+1) .project-card{
+  a:nth-of-type(2n) .post-card, a:nth-of-type(2n+1) .post-card{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .techbox{
     margin-left: 5px;
     margin-right: 5px;
   }

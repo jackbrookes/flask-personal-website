@@ -1,0 +1,46 @@
+{
+    "LabVIEW": {
+      "color": "065fa3",
+      "icon": "code"
+    },
+
+    "Mathematics": {
+      "color": "f65a5b",
+      "icon": "times"
+    },
+
+    "MATLAB": {
+      "color": "bb92ac",
+      "icon": "code"
+    },
+
+    "Python": {
+      "color": "3572A5",
+      "icon": "code"
+    },
+
+    "Personal": {
+      "color": "553a99",
+      "icon": "user"
+    },
+
+    "Presentation": {
+      "color": "f65314",
+      "icon": "users"
+    },
+
+    "Unity": {
+      "color": "00cccc",
+      "icon": "gamepad"
+    },
+
+    "C#": {
+      "color": "178600",
+      "icon": "gamepad"
+    },
+
+    "default": {
+      "color": "99a",
+      "icon": "circle"
+    }
+}

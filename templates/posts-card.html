@@ -1,0 +1,16 @@
+<div class="card cf">
+  <h2 class="section-title">
+    {% if current_page == "Posts"%}
+      Posts
+    {% else %}
+      <a class="arrow" href="{{ url_for('posts')}}">Posts</a>
+    {% endif %}
+  </h2>
+
+
+  {% for post in posts %}
+    <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
+      {% include 'small-post-card.html' %}
+    </a>
+  {% endfor %}
+</div>
