@@ -14,7 +14,7 @@ app = Flask(__name__)
 app.config.from_pyfile('config.py')
 flatpages = FlatPages(app)
 
-with open(os.path.join(cfd, 'tagmap.json') as json_data:
+with open(os.path.join(cfd, 'tagmap.json')) as json_data:
     tag_map = json.load(json_data)
 
 # custom jinja functions
