@@ -11,7 +11,7 @@ from flask_flatpages.utils import pygmented_markdown
 
 POST_DIR = 'posts'
 app = Flask(__name__)
-app.config.from_object('config')
+app.config.from_pyfile('config.py')
 flatpages = FlatPages(app)
 
 with open('tagmap.json') as json_data:
