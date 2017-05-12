@@ -8,13 +8,13 @@ from flask import Flask, render_template, render_template_string,\
 from flask_flatpages import FlatPages, pygments_style_defs
 from flask_flatpages.utils import pygmented_markdown
 
-
+cfd = os.path.dirname(os.path.realpath(__file__))
 POST_DIR = 'posts'
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
 flatpages = FlatPages(app)
 
-with open('tagmap.json') as json_data:
+with open(os.path.join(cfd, 'tagmap.json') as json_data:
     tag_map = json.load(json_data)
 
 # custom jinja functions
