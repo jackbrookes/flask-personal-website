@@ -45,14 +45,13 @@ def utility_processor():
             else:
                 return ""
 
-
     return dict(url_for_tag = url_for_tag,
                 year = year,
                 get_tag_property = get_tag_property)
 
 @app.route('/pygments.css')
 def pygments_css():
-    return pygments_style_defs('tango'), 200, {'Content-Type': 'text/css'}
+    return pygments_style_defs('friendly'), 200, {'Content-Type': 'text/css'}
 
 def prerender_jinja(text):
     prerendered_body = render_template_string(Markup(text))
@@ -82,16 +81,21 @@ def posts(pagenum):
 @app.route('/posts/<name>/')
 def post(name):
     path = '{}/{}'.format(POST_DIR, name)
-    print(path)
     post = flatpages.get_or_404(path)
     return render_template('post.html',
                            post=post,
                            current_page='Posts')
 
+@app.route('/about/')
+def about():
+    return render_template('about.html',
+                           current_page='About')#
+
 @app.route('/contact/')
 def contact():
     return render_template('contact.html',
                            current_page='Contact')
+
 
 
 @app.errorhandler(404)

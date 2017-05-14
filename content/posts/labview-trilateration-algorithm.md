@@ -8,7 +8,7 @@ github_link: https://github.com/jackbrookes/LabVIEW-trilateration-algorithm
 pin_rank: 10
 
 ## Description
-https://en.wikipedia.org/wiki/Trilateration
+[https://en.wikipedia.org/wiki/Trilateration](https://en.wikipedia.org/wiki/Trilateration)
 
 Calculates position of a point in 3D space which is at known distances from three points. Does not have the restriction of the wikipedia method, works for any three points in 3D space.
 

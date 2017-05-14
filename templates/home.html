@@ -5,8 +5,10 @@
 {% endblock %}
 
 {% block content %}
-  {% include 'me-card.html' %}
+  {% include 'vec-net.html' %}
   {% include 'about-card.html' %}
+  {% with show_seemore = True %}
   {% include 'posts-card.html' %}
+  {% endwith %}
   {% include 'contact-card.html' %}
 {% endblock %}

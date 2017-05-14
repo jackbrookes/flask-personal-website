@@ -36,7 +36,12 @@
 
     "C#": {
       "color": "178600",
-      "icon": "gamepad"
+      "icon": "code"
+    },
+
+    "Engineering": {
+      "color": "5d5c5d",
+      "icon": "cogs"
     },
 
     "default": {

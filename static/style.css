@@ -3,7 +3,7 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-
+iframe{border:none;}
 html {overflow-y: scroll}
 
 html, body { margin: 0; padding: 0; height: 100%;}
@@ -20,6 +20,30 @@ h1, h2, h3, h4, h5, h6 {
 
 a:visited, a:link{
   color: inherit;
+}
+
+.intrinsic-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+/* 16x9 Aspect Ratio */
+.intrinsic-container-16x9 {
+  padding-bottom: 56.25%;
+}
+
+/* 4x3 Aspect Ratio */
+.intrinsic-container-4x3 {
+  padding-bottom: 75%;
+}
+
+.intrinsic-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -66,9 +90,26 @@ li.navbutton a:hover{
   transition: all .15s ease-in-out;
 }
 
+a.caption{
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #f8f8f8;
+  padding: 5px 10px;
+  text-align: right;
+  color: #777;
+}
+
+
 #profile-card-container{
   margin: 20px auto 15px auto;
   max-width: 370px;
+}
+
+#p5-container{
+  margin: 0 auto;
+  height: 250px;
 }
 
 img.profile-card-pic{
@@ -106,7 +147,14 @@ img.profile-card-pic{
 
 #content{
   overflow:auto;
-  padding-bottom: 20px;W
+  padding-bottom: 20px;
+  overflow-x: hidden;
+}
+
+pre {
+  min-width: 100%;
+  overflow-x: auto;
+  padding: 10px;
 }
 
 #content p, #content .card p{
@@ -126,11 +174,12 @@ img.profile-card-pic{
   height: 19px;
   display: block;
   overflow: hidden;
+  font-weight: 700;
 }
 
 .card{
   elementoverflow: hidden;
-  padding: 10px 0 25px 0;
+  padding: 10px 0 0 0;
 }
 
 .cf:before,
@@ -152,7 +201,7 @@ img.profile-card-pic{
 }
 
 h2 {
-  margin: 10px 0 24px 0;
+  margin: 25px 0 20px 0;
   padding-bottom: 6px;
   border-bottom: solid 1px #f0f0f0;
 }
@@ -160,6 +209,10 @@ h2 {
 h2 a{
   color: inherit;
   text-decoration: none;
+}
+
+p + h2 {
+  padding-top: 25px;
 }
 
 /*h2.section-title a:after{
@@ -274,11 +327,12 @@ p.small{
   font-size: 13px !important;
   height: 50px;
   overflow:hidden;
+  font-style: italic;
 }
 
 p.summary{
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   font-style: italic;
   font-weight: 400;
 }
