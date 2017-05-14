@@ -89,14 +89,16 @@ def post(name):
 @app.route('/about/')
 def about():
     return render_template('about.html',
-                           current_page='About')#
+                           current_page='About')
 
 @app.route('/contact/')
 def contact():
     return render_template('contact.html',
                            current_page='Contact')
 
-
+@app.route('/favicon.ico')
+def favicon():
+    return url_for('static', filename='me_circ.jpg')
 
 @app.errorhandler(404)
 def page_not_found(e):

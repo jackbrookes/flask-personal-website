@@ -28,24 +28,11 @@ function setup(){
 function draw() {
     t = millis()/(1000 / -3)
     for (var i=0; i<particles.length; i++)  {
-      particles[i].move();
+      var exy = 0.2*Math.sin(t + particles[i].x/500);
+      particles[i].move(exy);
     }
 
     background('#0B0E31');
-    for (var i=0; i<particles.length; i++)  {
-      particle = particles[i];
-      dist_cap = max_dist + 30*Math.sin(t + particle.x/100);
-
-      for (var j=i+1; j<particles.length; j++)  {
-        particle2 = particles[j];
-        distance = dist(particle.x, particle.y, particle2.x, particle2.y);
-        if (distance < dist_cap){
-          var o = (1-distance/dist_cap);
-          stroke(colorAlpha('#c1c5f1', o));
-          line(particle.x, particle.y, particle2.x, particle2.y);
-        }
-      }
-    }
 
     for (var i=0; i<particles.length; i++)  {
       particles[i].display();
@@ -87,7 +74,7 @@ function Particle() {
     ellipse(this.x, this.y, this.r, this.r);
   }
 
-  this.move = function()
+  this.move = function(ei2)
   {
 
     var xr = this.x - hw;
@@ -100,25 +87,29 @@ function Particle() {
     if (this.y > height+10){
       this.i = -this.bi;
       ei = -1;
+      ei2 = 0;
     }
 
     if (this.y < -10){
       this.i = this.bi;
       ei = 1;
+      ei2 = 0;
     }
 
     if (this.x > width+10){
       this.j = -this.bj;
       ej = -1;
+
     }
 
     if (this.x < -10){
       this.j = this.bj;
       ej = 1;
+
     }
 
     this.x = this.x + this.j + ej;
-    this.y = this.y + this.i + ei;
+    this.y = this.y + this.i + ei + ei2;
 
   }
 
