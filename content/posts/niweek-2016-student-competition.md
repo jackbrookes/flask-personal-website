@@ -21,4 +21,4 @@ competition based on the project's innovation, complexity and societal
 impact.
 
 [NI Community Page](https://decibel.ni.com/content/docs/DOC-46580)
-(Watch the presentation on Youtube)[https://www.youtube.com/watch?v=8WbgjWfF17g]
+(Watch the presentation on Youtube)(https://www.youtube.com/watch?v=8WbgjWfF17g)

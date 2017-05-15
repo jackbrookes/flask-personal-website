@@ -6,7 +6,7 @@
 
     "Mathematics": {
       "color": "f65a5b",
-      "icon": "times"
+      "icon": "superscript"
     },
 
     "MATLAB": {
@@ -39,9 +39,19 @@
       "icon": "code"
     },
 
+    "JavaScript": {
+      "color": "2bbe56",
+      "icon": "code"
+    },
+
     "Engineering": {
       "color": "5d5c5d",
       "icon": "cogs"
+    },
+
+    "Processing": {
+      "color": "ed225d",
+      "icon": "dot-circle-o"
     },
 
     "default": {

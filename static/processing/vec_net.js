@@ -1,135 +1,93 @@
-var particles = [];
-var hw;
-var hh;
+var funkyBoxes = [[]];
+var ps;
+var ox;
+var oy;
 
 function setup(){
-  frameRate(24);
-  max_dist = 50;
+
+  // Allows canvas to scale to screen size
   var prnt = document.getElementById('p5-container');
   var positionInfo = prnt.getBoundingClientRect();
   canvas = createCanvas(positionInfo.width, positionInfo.height);
   canvas.parent('p5-container');
+  //
 
-  // allows for different screen sizes to get same particle density
-  var density = 0.0005;
-  var area = positionInfo.width * positionInfo.height;
-
-
-  colorMode(RGB, 255, 255, 255, 1)
-  for (var i=0; i<area*density; i++)  {
-    particles.push(new Particle());
+  ps = 30; // element size
+  var nx = Math.floor(width/ps) - 2;
+  var ny = Math.floor(height/ps) - 2;
+  noiseDetail(1,1);
+  colorMode(HSB, 360, 100, 100);
+  for (var i=0; i<nx; i++) {
+    funkyBoxes[i] = [];
+    for (var j=0; j<ny; j++)  {
+      funkyBoxes[i][j] = new FunkyBox(i, j);
+    }
   }
-
-  hw = width/2;
-  hh = height/2;
-
+  ox = (width - (ps * nx))/2;
+  oy = (height - (ps * ny))/2;
 }
 
 function draw() {
-    t = millis()/(1000 / -3)
-    for (var i=0; i<particles.length; i++)  {
-      var exy = 0.2*Math.sin(t + particles[i].x/500);
-      particles[i].move(exy);
-    }
 
     background('#0B0E31');
 
-    for (var i=0; i<particles.length; i++)  {
-      particles[i].display();
+    t = millis()/(1000);
+    for (var i=0; i<funkyBoxes.length; i++)  {
+      for (var j=0; j<funkyBoxes[i].length; j++)  {
+
+        var v = 2*t + i + j + 5 * 2*noise(i/5,j/5,t/5);
+        var st = 0.5 + 0.5 * spacedSin(v);
+        var op = 1-st;
+
+        push();
+        translate(i*ps+ox, j*ps+oy);
+        c = color(360 * noise(i/6,j/6,t), 25, 100);
+        funkyBoxes[i][j].draw(st, c, op);
+        pop();
+      }
     }
+
 }
 
-function Particle() {
-
-  this.x = random(width);
-  this.y = random(height);
-  this.r = random(4, 8);
-  this.bi = random(0, 0.3);
-  this.bj = random(0, 0.3);
-  this.i = this.bi * (Math.random() < 0.5 ? -1 : 1);
-  this.j = this.bj * (Math.random() < 0.5 ? -1 : 1);
-
-  var rng = Math.floor(random(0, 4));
-  if (rng==0)
+function FunkyBox(i, j) {
+  this.draw = function(st, c, op)
   {
-    this.c = '#F74553';
-  }
-  if (rng==1)
-  {
-    this.c = '#7F9CA0';
-  }
-  if (rng==2)
-  {
-    this.c = '#FFAB98';
-  }
-  if (rng==3)
-  {
-    this.c = '#E5DBC0';
+    stroke(c);
+    fill(0,0,0,0)
+    var t = -8;
+    var ips = ps-2*t;
+    beginShape();
+    vertex(t+st*ips, t+st*ips);
+    vertex(ps-t, t);
+    vertex(t+(1-st)*ips, t+(1-st)*ips);
+    vertex(t, ps-t);
+    vertex(t+st*ips, t+st*ips);
+    endShape();
+    stroke(c);
+    var d = ps - 15;
+    ellipse(ps/2, ps/2, d, d);
+    fill(c);
+    ellipse(ps/2, ps/2, d*op, d*op);
   }
 
-  this.display = function()
-  {
-    noStroke();
-    fill(this.c);
-    ellipse(this.x, this.y, this.r, this.r);
-  }
-
-  this.move = function(ei2)
-  {
-
-    var xr = this.x - hw;
-    var yr = this.y - hh;
-    var theta = Math.atan2(xr, yr);
-
-    var ej = 0.4 * Math.cos(theta);
-    var ei = 0.4 * -Math.sin(theta);
-
-    if (this.y > height+10){
-      this.i = -this.bi;
-      ei = -1;
-      ei2 = 0;
-    }
-
-    if (this.y < -10){
-      this.i = this.bi;
-      ei = 1;
-      ei2 = 0;
-    }
-
-    if (this.x > width+10){
-      this.j = -this.bj;
-      ej = -1;
-
-    }
-
-    if (this.x < -10){
-      this.j = this.bj;
-      ej = 1;
-
-    }
-
-    this.x = this.x + this.j + ej;
-    this.y = this.y + this.i + ei + ei2;
-
-  }
-
- }
-
-function compare(a,b) {
-  if (typeof a == 'undefined' && typeof b == 'undefined')
-    return 0;
-  if (typeof a == 'undefined')
-    return 1;
-  if (typeof b == 'undefined')
-    return -1;
-  if (a.tempdist > b.tempdist)
-    return -1;
-  if (a.tempdist < b.tempdist)
-    return 1;
-  return 0;
 }
 
- function colorAlpha(aColor, alpha) {
+function colorAlpha(aColor, alpha) {
   var c = color(aColor);
   return color('rgba(' +  [red(c), green(c), blue(c), alpha].join(',') + ')');
+}
+
+function clamp(num, min, max) {
+  return num <= min ? min : num >= max ? max : num;
+}
+
+function spacedSin(x){
+  var xn = Math.abs(x % (2*Math.PI));
+  if (xn < Math.PI/2){
+    return Math.sin(x);
+  } else if (xn > 3 * Math.PI/2) {
+    return Math.sin(x - Math.PI);
+  } else {
+    return 1;
+  }
 }
