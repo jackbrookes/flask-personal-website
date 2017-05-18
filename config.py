@@ -7,4 +7,4 @@ BLOGGING_URL_PREFIX = "/posts"
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_ROOT = 'content'
-FREEZER_DESTINATION = 'jbrookes-static-html'
+FREEZER_DESTINATION = 'jackbrookes.github.io'

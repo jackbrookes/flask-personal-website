@@ -3,6 +3,7 @@ __pycache__/
 img_gen/
 *.py[cod]
 *$py.class
+jackbrookes.github.io/
 
 # secret
 private_config.py
