@@ -1,4 +1,4 @@
-title: NIWeek 2016 Student Competition
+title: NI 2016 Student Competition
 date: 2016-08-16
 tags:
   - Presentation
@@ -7,7 +7,9 @@ tags:
 short_description: >
   Winning the worldwide NI Student Competition and presenting at NI Week 2016
   in Austin, TX.
+pin_rank: 50
 
+![LabVIEW student competition winners]({{ url_for('static', filename='blog-images/award.jpg') }})
 
 As my Mechanical Engineering Master's project, I was part of a team
 which aimed to help make a fairly new field, rehabilitation robotics,
@@ -21,4 +23,5 @@ competition based on the project's innovation, complexity and societal
 impact.
 
 [NI Community Page](https://decibel.ni.com/content/docs/DOC-46580)
-(Watch the presentation on Youtube)(https://www.youtube.com/watch?v=8WbgjWfF17g)
+
+[Watch the presentation on Youtube](https://www.youtube.com/watch?v=8WbgjWfF17g)

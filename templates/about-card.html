@@ -1,6 +1,10 @@
 <div class="card">
   <h2 class="section-title">
-    About me
+    {% if current_page == "About"%}
+      About
+    {% else %}
+      <a class="arrow" href="{{ url_for('about')}}">About</a>
+    {% endif %}
   </h2>
 
   <p>

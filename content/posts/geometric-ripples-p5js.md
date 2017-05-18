@@ -1,4 +1,4 @@
-title: Gemoetric ripples in p5js
+title: Geometric ripples in p5js
 date: 2017-05-15
 tags:
   - Processing
@@ -6,6 +6,7 @@ tags:
   - Mathematics
 short_description: >
   Inspired by openprocessing.org, I made a looping gemoetric animation in p5js.  
+pin_rank: 40
 
 {% include 'vec-net.html' %}
 

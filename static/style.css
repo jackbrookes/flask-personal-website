@@ -145,7 +145,7 @@ img.profile-card-pic{
   max-width: 640px;
   min-width: 320px;
   min-height: 100%;
-  padding-bottom: 180px;
+  padding-bottom: 230px;
 }
 
 #content{
@@ -368,8 +368,8 @@ a.github:hover{
   font-weight: bold;
 
   position: relative;
-  margin-top: -180px; /* negative value of footer height */
-  height: 180px;
+  margin-top: -220px; /* negative value of footer height */
+  height: 220px;
 }
 
 #footer{

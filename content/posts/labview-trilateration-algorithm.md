@@ -13,9 +13,11 @@ pin_rank: 10
 Calculates position of a point in 3D space which is at known distances from three points. Does not have the restriction of the wikipedia method, works for any three points in 3D space.
 
 ## Video Demonstration
-[https://vimeo.com/174407807](https://vimeo.com/174407807)
+{% from 'macros.html' import vimeo %}
+{{ vimeo('174407807') }}
+
 
 ## Steps to Implement or Execute Code
-1. Download the attached project.
+1. Clone the Github repo.
 2. Open the project.
 3. Run Trilateration.vi, or add it to your project with necessary SubVIs.

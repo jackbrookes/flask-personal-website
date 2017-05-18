@@ -98,7 +98,7 @@ def contact():
 
 @app.route('/favicon.ico')
 def favicon():
-    return url_for('static', filename='me_circ.jpg')
+    return url_for('static', filename='me_circ.png')
 
 @app.errorhandler(404)
 def page_not_found(e):
