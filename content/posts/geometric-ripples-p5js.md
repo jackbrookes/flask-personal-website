@@ -5,7 +5,7 @@ tags:
   - JavaScript
   - Mathematics
 short_description: >
-  Inspired by openprocessing.org, I made a looping gemoetric animation in p5js.  
+  Inspired by openprocessing.org, I made a looping geometric animation in p5js.  
 pin_rank: 40
 
 {% include 'vec-net.html' %}
