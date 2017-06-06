@@ -15,6 +15,20 @@
   {% endfor %}
 </div>
 
+{% if pagenum %}
+
+  <a
+  {% if (pagenum - 1) > 0 %}href="/posts/page/{{ pagenum - 1 }}"{% endif %}
+  class="pagination"
+  >Prev</a>
+  {{ pagenum }}
+  <a
+  {% if (pagenum + 1) <= maxpages %}href="/posts/page/{{ pagenum + 1 }}"{% endif %}
+  class="pagination"
+  >Next</a>
+
+{% endif %}
+
 {% if show_seemore %}
   <a href="{{ url_for('posts')}}" class="caption" style="margin-top: 5px"><span class="arrow">See all posts</span></a>
 {% endif %}

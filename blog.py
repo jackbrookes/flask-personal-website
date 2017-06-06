@@ -2,6 +2,7 @@ import sys
 import os
 import datetime
 import json
+import math
 from flask import Flask, render_template, render_template_string,\
                   Markup, current_app, \
                   url_for
@@ -62,7 +63,7 @@ app.config['FLATPAGES_HTML_RENDERER'] = prerender_jinja
 
 @app.route("/")
 def home():
-    posts = get_posts(6, pinned_only = True)
+    posts, _ = get_posts(6, pinned_only = True)
     return render_template('home.html',
                            posts = posts,
                            current_page='Home')
@@ -74,10 +75,13 @@ def me():
 @app.route("/posts/", defaults={'pagenum': 1})
 @app.route("/posts/page/<pagenum>/")
 def posts(pagenum):
-    posts = get_posts(8, page = int(pagenum))
+    posts, maxpages = get_posts(8, page = int(pagenum))
+
     return render_template('posts.html',
                            posts=posts,
-                           current_page='Posts')
+                           current_page='Posts',
+                           pagenum = int(pagenum),
+                           maxpages = maxpages)
 
 @app.route('/posts/<name>/')
 def post(name):
@@ -117,8 +121,10 @@ def get_posts(limit, pinned_only = False, page = 1):
         posts.sort(key=lambda item:item['date'], reverse=True)
     first = (page - 1) * limit
     last = first + limit
+    maxpages = math.ceil(len(posts) / limit)
     posts = posts[first:last]
-    return posts
+    print(maxpages)
+    return posts, maxpages
 
 if __name__ == "__main__":
     app.run(debug = True)
