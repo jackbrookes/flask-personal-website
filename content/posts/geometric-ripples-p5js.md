@@ -6,7 +6,6 @@ tags:
   - Mathematics
 short_description: >
   Inspired by openprocessing.org, I made a looping geometric animation in p5js.  
-pin_rank: 40
 
 {% include 'vec-net.html' %}
 
@@ -85,15 +84,6 @@ Source code:
         ellipse(ps/2, ps/2, d*op, d*op);
       }
 
-    }
-
-    function colorAlpha(aColor, alpha) {
-      var c = color(aColor);
-      return color('rgba(' +  [red(c), green(c), blue(c), alpha].join(',') + ')');
-    }
-
-    function clamp(num, min, max) {
-      return num <= min ? min : num >= max ? max : num;
     }
 
     function spacedSin(x){

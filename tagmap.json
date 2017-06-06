@@ -39,6 +39,11 @@
       "icon": "code"
     },
 
+    "WWW": {
+      "color": "09347a",
+      "icon": "blobe"
+    },
+
     "JavaScript": {
       "color": "2bbe56",
       "icon": "code"
@@ -52,6 +57,21 @@
     "Processing": {
       "color": "ed225d",
       "icon": "dot-circle-o"
+    },
+
+    "Graphic Design": {
+      "color": "d52685",
+      "icon": "paint-brush"
+    },
+
+    "Programming": {
+      "color": "101010",
+      "icon": "code"
+    },
+
+    "After Effects": {
+      "color": "6a737b",
+      "icon": "video-camera"
     },
 
     "default": {

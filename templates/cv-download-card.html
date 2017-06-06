@@ -1,0 +1,16 @@
+<div class="card">
+  <h2 class="section-title">
+    {% if current_page == "About"%}
+      CV/Resume
+    {% else %}
+      <a class="arrow" href="{{ url_for('about')}}">About</a>
+    {% endif %}
+  </h2>
+  <p style="text-align: center">
+
+    <a href="{{url_for("static", filename="jack-brookes-cv.pdf")}}" class="download">
+      <i class="fa fa-file-text fa-fw" aria-hidden="true"></i>View CV (.pdf)
+    </a>
+
+  </p>
+</div>

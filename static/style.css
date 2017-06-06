@@ -90,6 +90,22 @@ li.navbutton a:hover{
   transition: all .15s ease-in-out;
 }
 
+a.download{
+  display: inline-block;
+  background-color: #E4EBF0;
+  font-weight: 700;
+  padding: 1.5em;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+
+}
+
+a.download:hover{
+  background-color: #4180AB;
+  color: white;
+}
+
 a.caption{
   display: block;
   text-decoration: none;
@@ -401,9 +417,14 @@ ul.footer-ul li a:hover{
     padding-top: 0px;
   }
 
+  #content{
+    margin-bottom: 40px;
+  }
+
   #content, #footer {
     padding: 0 15px;
   }
+
 
   #content p, #content .card p{
     font-size: 16px;

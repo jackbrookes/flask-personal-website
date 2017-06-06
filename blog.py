@@ -20,6 +20,7 @@ with open(os.path.join(cfd, 'tagmap.json')) as json_data:
 # custom jinja functions
 @app.context_processor
 def utility_processor():
+
     def url_for_tag(tag):
         icon_str= 'icons/{}.png'
         filepath = icon_str.format(tag.replace(' ', '_').lower())
@@ -113,7 +114,7 @@ def get_posts(limit, pinned_only = False, page = 1):
         posts = [p for p in posts if 'pin_rank' in p.meta]
         posts.sort(key=lambda item:item['pin_rank'], reverse=True)
     else:
-        posts.sort(key=lambda item:item['date'], reverse=False)
+        posts.sort(key=lambda item:item['date'], reverse=True)
     first = (page - 1) * limit
     last = first + limit
     posts = posts[first:last]
