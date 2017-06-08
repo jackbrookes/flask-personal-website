@@ -98,12 +98,29 @@ a.download{
   text-decoration: none;
   font-size: 16px;
   text-transform: uppercase;
-
 }
 
 a.download:hover{
   background-color: #4180AB;
   color: white;
+}
+
+.pagenums{
+  margin: 0 auto;
+  text-align: center;
+}
+
+a.pagination, .pagenum{
+  display: inline-block;
+  font-weight: 700;
+  margin: 1em 0.5em;
+  padding: 0.7em 1.2em;
+  border: solid 1px #E4EBF0;
+  text-decoration: none;
+}
+
+a.pagination {
+  background-color: #E4EBF0;
 }
 
 a.caption{

@@ -16,17 +16,23 @@
 </div>
 
 {% if pagenum %}
-
-  <a
-  {% if (pagenum - 1) > 0 %}href="/posts/page/{{ pagenum - 1 }}"{% endif %}
-  class="pagination"
-  >Prev</a>
+<div class="pagenums">
+  {% if (pagenum - 1) > 0 %}
+    <a
+    href="{{ url_for('posts',  pagenum = pagenum - 1 ) }}"
+    class="pagination"
+    >Prev</a>
+  {% endif %}
+  <span class="pagenum">
   {{ pagenum }}
+  </span>
+  {% if (pagenum + 1) <= maxpages %}
   <a
-  {% if (pagenum + 1) <= maxpages %}href="/posts/page/{{ pagenum + 1 }}"{% endif %}
+  href="{{ url_for('posts',  pagenum = pagenum + 1 ) }}"
   class="pagination"
   >Next</a>
-
+  {% endif %}
+</div>
 {% endif %}
 
 {% if show_seemore %}

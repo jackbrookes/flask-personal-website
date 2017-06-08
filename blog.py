@@ -112,8 +112,6 @@ def page_not_found(e):
 
 def get_posts(limit, pinned_only = False, page = 1):
     posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
-    for f in flatpages:
-        print(f.path)
     if pinned_only:
         posts = [p for p in posts if 'pin_rank' in p.meta]
         posts.sort(key=lambda item:item['pin_rank'], reverse=True)
@@ -123,7 +121,6 @@ def get_posts(limit, pinned_only = False, page = 1):
     last = first + limit
     maxpages = math.ceil(len(posts) / limit)
     posts = posts[first:last]
-    print(maxpages)
     return posts, maxpages
 
 if __name__ == "__main__":
