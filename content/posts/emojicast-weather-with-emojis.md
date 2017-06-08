@@ -1,4 +1,4 @@
-title: EmojiCast: Weather as Emojis
+title: EmojiCast, weather as Emojis
 date: 2017-04-01
 tags:
   - Python
