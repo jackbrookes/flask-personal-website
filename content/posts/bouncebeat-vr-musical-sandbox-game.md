@@ -1,4 +1,4 @@
-title: BounceBeat - Free VR Musical Sandbox Game
+title: BounceBeat - Free VR Music Game
 date: 2017-06-24
 tags:
   - Unity
