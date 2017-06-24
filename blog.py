@@ -63,7 +63,7 @@ app.config['FLATPAGES_HTML_RENDERER'] = prerender_jinja
 
 @app.route("/")
 def home():
-    posts, _ = get_posts(6, pinned_only = True)
+    posts, _ = get_posts(4, pinned_only = True)
     return render_template('home.html',
                            posts = posts,
                            current_page='Home')

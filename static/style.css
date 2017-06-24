@@ -196,6 +196,7 @@ pre {
 #content p, #content .card p{
   font-size: 18px;
   text-decoration: none;
+  line-height: 1.3;
 }
 
 #content p img {
