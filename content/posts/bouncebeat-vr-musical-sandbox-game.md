@@ -5,7 +5,7 @@ tags:
   - C#
 short_description: >
   Virtual reality musical physics-based sandbox game, made in Unity, free and open source
-pin_rank: -10
+pin_rank: 45
 github_link: https://github.com/jackbrookes/bouncebeat
 
 ![BounceBeat logo]({{ url_for('static', filename='blog-images/bouncebeat-logo.png') }})
