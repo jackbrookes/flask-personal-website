@@ -5,7 +5,6 @@ tags:
   - Mathematics
 short_description: LabVIEW library that performs 'sinusoidal' filtering and interpolation for a discrete input, even with irregular timing.
 github_link: https://github.com/jackbrookes/LabVIEW-smooth-interpolation
-pin_rank: 0
 
 LabVIEW library that allows smooth filtering and interpolation for a discrete input, even with irregular timing.
 
