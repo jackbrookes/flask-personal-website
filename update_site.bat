@@ -1,7 +1,7 @@
-call git push master
+call git push
 call python freezer.py
-call cd jbrookes.github.io
+call cd jackbrookes.github.io
 call git add .
-For /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set mydate=%%c-%%a-%%b)
+For /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set mydate=%%a-%%b)
 call git commit -m "%mydate%"
-git push master
+call git push
