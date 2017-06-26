@@ -8,11 +8,10 @@ short_description: >
 pin_rank: 45
 github_link: https://github.com/jackbrookes/bouncebeat
 
-## Video
-
 {% from 'macros.html' import vimeo %}
 {{ vimeo('223177181') }}
 
+## Information
 
 ![BounceBeat logo]({{ url_for('static', filename='blog-images/bouncebeat-logo.png') }})
 
@@ -23,8 +22,6 @@ beads will make a sound when they hit a "BouncePad", the pitch of the sound bein
 dependent on the velocity. You can create as many as you like and move them around,
 and theoretically create complex songs if you chain together sounds by changing the
 tempo and instrument of the sounds.
-
-## More information
 
 * You can spawn objects by picking them up from your wrists
 * You can snap objects rotationally using the index finger trigger
