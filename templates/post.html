@@ -1,5 +1,16 @@
 {% extends "base.html" %}
+
+
 {% block title %}{{ post.title }}{% endblock %}
+
+{% if post.meta_image is defined %}
+  {% block head %}
+    <meta property="og:image" content="{{ post.meta_image }}"/>
+    {{ super() }}
+  {% endblock %}
+{% endif %}
+
+{% block description %}{{ post.short_description }}{% endblock %}
 
 {% block content %}
 <h1 class="title">
