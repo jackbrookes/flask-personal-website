@@ -7,6 +7,7 @@ short_description: >
   Virtual reality musical physics-based sandbox game, made in Unity, free and open source
 pin_rank: 45
 github_link: https://github.com/jackbrookes/bouncebeat
+meta_image: blog-images/bouncebeat-logo.png
 
 {% from 'macros.html' import vimeo %}
 {{ vimeo('223177181') }}
