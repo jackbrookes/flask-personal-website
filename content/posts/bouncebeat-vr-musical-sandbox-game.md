@@ -8,6 +8,12 @@ short_description: >
 pin_rank: 45
 github_link: https://github.com/jackbrookes/bouncebeat
 
+## Video
+
+{% from 'macros.html' import vimeo %}
+{{ vimeo('223177181') }}
+
+
 ![BounceBeat logo]({{ url_for('static', filename='blog-images/bouncebeat-logo.png') }})
 
 
