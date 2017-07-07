@@ -8,4 +8,4 @@ short_description: >
 
 
 I appeared on BBC Radio 4 on the "You and Yours" programme with Winnifred Robinson.
-You can listen (here)[http://www.bbc.co.uk/programmes/b08vzt8d] (I am on around the 17:50 minute mark)
+You can listen [here](http://www.bbc.co.uk/programmes/b08vzt8d) (I am on around the 17:50 minute mark)
