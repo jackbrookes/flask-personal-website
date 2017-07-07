@@ -17,10 +17,10 @@
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@jackbrookes" />
-    <meta name="twitter:title" content="{% block title %}{% endblock %}" />
-    <meta name="twitter:description" content="{% block description %}{% endblock %} - Jack Brookes" />
+    <meta name="twitter:title" content="{{ self.title() }}" />
+    <meta name="twitter:description" content="{{ self.description() }} - Jack Brookes" />
 
-    <meta name="twitter:image" content="{% block img %}{% endblock %}" />
+
 
     <title>{% block title %}{% endblock %} - Jack Brookes</title>
 
