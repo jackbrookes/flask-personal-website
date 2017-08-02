@@ -39,6 +39,11 @@
       "icon": "code"
     },
 
+    "R": {
+      "color": "2222ff",
+      "icon": "code"
+    },
+
     "WWW": {
       "color": "09347a",
       "icon": "globe"
