@@ -1,11 +1,24 @@
 <div class="card">
+
   <h2 class="section-title">
     {% if current_page == "About"%}
-      CV/Resume
+      About
     {% else %}
       <a class="arrow" href="{{ url_for('about')}}">About</a>
     {% endif %}
   </h2>
+
+  <p>
+    I'm a graduate of Mechanical Engineering, and now a PhD candidate in the area of percpetual science - particularly how haptics and virtual reality can affect motor learning. Some of my interests:
+
+    <ul>
+      <li> Virtual reality, and the challenges and opportunities it brings (technical, perceptual, social, or otherwise) </li>
+      <li> Data processing, visualisation and analysis </li>
+      <li> Coding with craftmanship: producing efficient, intuitive, and maintaiable software </li>
+      <li> Design and user experience </li>
+    </ul>
+  </p>
+
   <p style="text-align: center">
 
     <a href="{{url_for("static", filename="jack-brookes-cv.pdf")}}" class="download">

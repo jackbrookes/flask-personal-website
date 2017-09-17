@@ -31,6 +31,7 @@
       <ul id="navbar">
         <li class="navbutton"><a href="{{url_for('home')}}" {% if current_page == 'Home' %}class="current"{% endif %}>Home</a></li>
         <li class="navbutton"><a href="{{url_for('posts')}}" {% if current_page == 'Posts' %}class="current"{% endif %}>Posts</a></li>
+        <li class="navbutton"><a href="{{url_for('publications')}}" {% if current_page == 'Publications' %}class="current"{% endif %}>Publications</a></li>
         <li class="navbutton"><a href="{{url_for('about')}}" {% if current_page == 'About' %}class="current"{% endif %}>About</a></li>
         <li class="navbutton"><a href="{{url_for('contact')}}" {% if current_page == 'Contact' %}class="current"{% endif %}>Contact</a></li>
         <li id="spacer">&nbsp;</li>

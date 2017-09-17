@@ -63,7 +63,7 @@ app.config['FLATPAGES_HTML_RENDERER'] = prerender_jinja
 
 @app.route("/")
 def home():
-    posts, _ = get_posts(4, pinned_only = True)
+    posts, _ = get_posts(6, pinned_only = True)
     return render_template('home.html',
                            posts = posts,
                            current_page='Home')
@@ -100,6 +100,13 @@ def about():
 def contact():
     return render_template('contact.html',
                            current_page='Contact')
+
+@app.route('/publications/')
+def publications():
+    pub = flatpages.get_or_404("publications")
+    return render_template('publications.html',
+                           current_page='Publications',
+                           publications_page=pub)
 
 @app.route('/favicon.ico')
 def favicon():
