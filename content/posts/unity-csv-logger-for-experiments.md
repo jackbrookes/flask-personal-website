@@ -7,7 +7,6 @@ short_description: >
   A free package on the Unity Asset store which allows for simple .csv logging
   of data for research/QA.
 github_link: https://github.com/jackbrookes/unity-csv-trial-logger
-pin_rank: 15
 
 ![Trial logger screenshot]({{ url_for('static', filename='blog-images/trial-logger.png') }})
 
