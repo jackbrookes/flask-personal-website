@@ -4,7 +4,7 @@
 *(several in progress)*
 
 ### Conference proceedings
-* **J. Brookes**, M. Kuznecovs, M. Kanakis, A. Grigals, M. Narvidas, J. Gallagher, M. Levesley, *"Robots testing robots: ALAN-Arm, a humanoid arm for the testing of robotic rehabilitation systems"* 2017 International Conference on Rehabilitation Robotics (ICORR), London, 2017, pp. 676-681. <http://doi.org/10.1109/ICORR.2017.8009326/>
+* **J. Brookes**, M. Kuznecovs, M. Kanakis, A. Grigals, M. Narvidas, J. Gallagher, M. Levesley, *"Robots testing robots: ALAN-Arm, a humanoid arm for the testing of robotic rehabilitation systems"* 2017 International Conference on Rehabilitation Robotics (ICORR), London, 2017, pp. 676-681. <http://doi.org/10.1109/ICORR.2017.8009326>
 
 ### Presentations
 

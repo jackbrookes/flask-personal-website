@@ -108,6 +108,11 @@ def publications():
                            current_page='Publications',
                            publications_page=pub)
 
+@app.route('/static/')
+def st():
+    return ""
+
+
 @app.route('/favicon.ico')
 def favicon():
     return url_for('static', filename='me_circ.png')
