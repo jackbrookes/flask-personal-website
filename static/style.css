@@ -418,8 +418,8 @@ a.github:hover{
   font-weight: bold;
 
   position: relative;
-  margin-top: -220px; /* negative value of footer height */
-  height: 220px;
+  margin-top: -260px; /* negative value of footer height */
+  height: 260px;
 }
 
 #footer{
