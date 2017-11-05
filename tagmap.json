@@ -79,6 +79,11 @@
       "icon": "video-camera"
     },
 
+    "VR": {
+      "color": "4a1a84",
+      "icon": "eye"
+    },
+
     "default": {
       "color": "99a",
       "icon": "circle"

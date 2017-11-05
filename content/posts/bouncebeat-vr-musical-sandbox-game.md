@@ -3,6 +3,7 @@ date: 2017-06-24
 tags:
   - Unity
   - C#
+  - VR
 short_description: >
   Virtual reality musical physics-based sandbox game, made in Unity, free and open source
 pin_rank: 45
