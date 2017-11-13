@@ -9,13 +9,12 @@ html {overflow-y: scroll}
 html, body { margin: 0; padding: 0; height: 100%;}
 
 body {
-  font-family: 'Lato', sans-serif;
-  color: #111;
+  font-family: 'Merriweather', serif;
+  color: rgb(46, 46, 46);
 }
 
 p.about{
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Merriweather', serif;
   font-weight: 400;
   font-size: 20;
 }
@@ -26,8 +25,8 @@ p.about{
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
 }
 
 a:visited, a:link{
@@ -64,6 +63,8 @@ ul, ol {
 }
 
 ul#navbar {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   list-style-type: none;
   padding: 25px 0px 25px 0px;
   margin: 0;
@@ -108,17 +109,18 @@ li.navbutton a:hover{
 
 a.download{
   display: inline-block;
-  background-color: #E4EBF0;
   font-weight: 700;
   padding: 1.5em;
   text-decoration: none;
   font-size: 16px;
   text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  border: solid #ccc 1px;
 }
 
 a.download:hover{
-  background-color: #4180AB;
-  color: white;
+  background-color: #f0f0f0;
 }
 
 .pagenums{
@@ -128,28 +130,48 @@ a.download:hover{
 
 a.pagination, .pagenum{
   display: inline-block;
-  font-weight: 700;
   margin: 1em 0.5em;
   padding: 0.7em 1.2em;
-  border: solid 1px #E4EBF0;
   text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
 }
-
-a.pagination {
-  background-color: #E4EBF0;
+a.pagination{
+    border: solid #ccc 1px;
+}
+a.pagination:hover {
+  background-color: #f0f0f0;
 }
 
 a.caption{
   display: block;
   text-decoration: none;
-  font-weight: bold;
   font-size: 14px;
   background-color: #f8f8f8;
   padding: 5px 10px;
   text-align: right;
   color: #777;
+  font-family: 'Open Sans', sans-serif;
 }
 a.caption:hover{
+  background-color: #ccc;
+}
+
+a.seemore{
+  display: block;
+  position: relative;
+  width: 90px;
+  margin: 10px auto;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 12px;
+  text-align: center;
+  color: #333;
+  content: "See more";
+  font-family: 'Open Sans', sans-serif;
+  border: solid #ccc 1px;
+}
+a.seemore:hover{
   background-color: #f0f0f0;
 }
 
@@ -191,15 +213,15 @@ img.profile-card-pic{
 
 #centred-container{
   margin: 0 auto;
-  max-width: 640px;
+  max-width: 720px;
   min-width: 320px;
   min-height: 100%;
-  padding-bottom: 230px;
+  padding-bottom: 260px;
 }
 
 #content{
   overflow:auto;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   overflow-x: hidden;
 }
 
@@ -224,14 +246,14 @@ pre {
 
 .post{
   text-decoration: none;
-  height: 19px;
+  height: 21px;
   display: block;
-  overflow: hidden;
+  overflow: elipsis;
   font-weight: 700;
 }
 
 .card{
-  elementoverflow: hidden;
+  overflow: hidden;
   padding: 10px 0 0 0;
 }
 
@@ -281,12 +303,12 @@ ul.tags, ul.contact{
   list-style-type: none;
   padding: 0;
   margin: 0;
-  font-weight: 700;
 }
 
 ul.contact li{
   margin: 8px 0;
   font-size: 16px;
+  font-weight: 700;
 }
 
 ul.contact li a{
@@ -297,6 +319,7 @@ ul.tags li{
   /*display: inline-block;*/
   margin: 1px 0;
   font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h2.techused{
@@ -349,12 +372,13 @@ img.tag-icon{
 }
 
 .post-card{
-  width: calc(50% - 5px);
+  font-family: 'Open Sans', sans-serif;
+  width: calc(50% - 10px);
   float: left;
-  background-color: #E4EBF0;
+  border: solid #ccc 1px;
   padding: 14px 12px 30px 12px;
-  margin: 5px 0;
-  height: 145px;
+  margin: 10px 0;
+  height: 160px;
 }
 
 .post-card:hover{
@@ -365,10 +389,10 @@ img.tag-icon{
 
 a:nth-of-type(2n+1) .post-card{
   margin-left: 0;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 a:nth-of-type(2n) .post-card{
-  margin-left: 5px;
+  margin-left: 10px;
   margin-right: 0;
 }
 
@@ -378,9 +402,11 @@ h1.title{
 
 p.small{
   font-size: 13px !important;
-  height: 50px;
-  overflow:hidden;
+  overflow: hidden;
   font-style: italic;
+  height: 65px;
+  font-weight: 400;
+  color: #333;
 }
 
 p.summary{
@@ -414,6 +440,7 @@ a.github:hover{
   padding: 20px 0;
   background-color: #E4EBF0;
   color: #4180AB;
+  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   font-weight: bold;
 
@@ -425,7 +452,7 @@ a.github:hover{
 #footer{
   margin-left: auto;
   margin-right: auto;
-  max-width: 640px;
+  max-width: 720px;
 }
 
 ul.footer-ul {
