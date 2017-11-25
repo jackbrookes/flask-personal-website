@@ -10,7 +10,7 @@ html, body { margin: 0; padding: 0; height: 100%;}
 
 body {
   font-family: 'Merriweather', serif;
-  color: rgb(46, 46, 46);
+  color: rgb(55, 55, 55);
 }
 
 p.about{
@@ -234,7 +234,7 @@ pre {
 #content p, #content .card p{
   font-size: 18px;
   text-decoration: none;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 #content p img {
