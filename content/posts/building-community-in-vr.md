@@ -4,7 +4,7 @@ tags:
   - Personal
   - VR
 short_description: >
-  Sharing experiences with other people is the best thing you can do in VR. How can we make it more common?
+  Sharing experiences with friends is the best thing you can do in VR. How can we make it more common?
 
 Experiences in life are better when shared with other humans. Facebook knows this - and that's why they bought Oculus - so they can build virtual communities where people chat, play and live with others without the the need for physical proximity. Also, VR experiences have the potential to be better than real life since we are not bound by physical laws. However, there's an inevitable chicken-and-egg problem whereby people won't buy headsets if they don't have friend's who won't - so few people do. I think you can lay a big enough egg - by producing lots of quality content that people want to play on their own, potentially initiating the spread of VR adoption throughout a network of people.
 
