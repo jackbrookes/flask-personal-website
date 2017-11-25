@@ -24,6 +24,11 @@
       "icon": "user"
     },
 
+    "Blog": {
+      "color": "3b443f",
+      "icon": "book"
+    },
+
     "Presentation": {
       "color": "f65314",
       "icon": "users"
