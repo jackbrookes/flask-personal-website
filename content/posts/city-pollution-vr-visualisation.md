@@ -12,5 +12,3 @@ short_description: >
 Quote from the [post on climate.leeds.ac.uk](http://climate.leeds.ac.uk/leeds-climathon-produces-winning-solutions-for-air-quality/)
 
 *We also gave the teams the chance to experience VR technology as a means of visualising air pollution, using a virtual model of Leeds developed by Arup with a programme being developed by PhD researcher Jack Brookes from the School of Psychology at the University of Leeds working with the Institute for Transport Studies showing levels of pollution as different colours. Participants were able to “walk” around the city at street level and choose less polluted routes. A pedestrian simulator (from VirtuoCITY) was also available, creating a more immersive experience.*
-
-
