@@ -6,10 +6,6 @@ tags:
 short_description: >
   I produced a small Unity3D demo of visualisation of city pollution in VR for demo at Leeds Climate Hackathon.
 
-
-I appeared on BBC Radio 4 on the "You and Yours" programme with Winifred Robinson.
-You can listen [here](http://www.bbc.co.uk/programmes/b08vzt8d) (I am on around the 17:50 minute mark)
-
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Leeds Climathon produces winning solutions for air quality <a href="https://twitter.com/hashtag/Virtuocity?src=hash&amp;ref_src=twsrc%5Etfw">#Virtuocity</a> <a href="https://t.co/Yd1ReYZwcG">https://t.co/Yd1ReYZwcG</a> <a href="https://t.co/ryRSaquHrj">pic.twitter.com/ryRSaquHrj</a></p>&mdash; Richard Romano (@realsimcreator) <a href="https://twitter.com/realsimcreator/status/928306228597489665?ref_src=twsrc%5Etfw">November 8, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
