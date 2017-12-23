@@ -1,13 +1,14 @@
 {% extends "base.html" %}
-{% block title %}Publications{% endblock %}
-
+{% block title %}
+  Publications
+{% endblock %}
 {% block content %}
+<div class="card cf">
   <h2 class="section-title">
-    {% if current_page == "Publications"%}
-      Publications
-    {% else %}
+    {% if current_page == "Publications"%} Publications {% else %}
       <a class="arrow" href="{{ url_for('about')}}">About</a>
     {% endif %}
   </h2>
   {{ publications_page.html|safe }}
+</div>
 {% endblock %}
