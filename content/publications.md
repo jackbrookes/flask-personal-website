@@ -8,6 +8,7 @@
 
 ### Presentations
 
+* *"Information and sensorimotor learning"*. UCL Neuroimaging Lab Meeting, November 2017
 * *"Virtual Reality in sensorimotor learning research"*. Accelerating the impact of sensorimotor learning research (EPS Conference), Leeds, July 2017
 * *"Using Virtual Reality to manipulate movement error in motor learning"*, Leeds University VR showcase, Leeds, July 2017
 * *"Accelerating skill acquisition through haptics in dentistry and surgery"*, Haptics in healthcare, European Robotics Forum 2017, Edinburgh, March 2017
