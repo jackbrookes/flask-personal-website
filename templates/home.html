@@ -6,8 +6,9 @@
 
 {% block content %}
   {% include 'about-card.html' %}
-  {% with show_seemore = True %}
+  {% with front_page = True %}
     {% include 'posts-card.html' %}
+    {% include 'projects-card.html' %}
   {% endwith %}
   {% include 'contact-card.html' %}
 {% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block title %}{{ project.title }}{% endblock %}
+{% if project.meta_image is defined %}
+{% block head %}
+<meta property="og:image" content="{{ url_for('static', filename=project.meta_image) }}" />
+<meta name="twitter:image" content="{{ url_for('static', filename=project.meta_image) }}" /> {{ super() }}
+{% endblock %}
+{% endif %}
+{% block description %}{{ project.short_description }}{% endblock %} {% block content %}
+
+{% if project.meta_image is defined %}
+    <img class="project-banner" src= "{{ url_for('static', filename=project.meta_image) }}" />
+{% endif %}
+
+<h1 class="title">{{ project.title }}</h1>
+<div class="inner-card">
+    <p class="date">
+        {{ project.date }}
+    </p>
+
+    <p class="summary">
+        {{ project.short_description }} {% if project.github_link is defined %}
+        <a class="github" href="{{ project.github_link }}">View on GitHub</a>
+        {% endif %}
+    </p>
+
+
+    {{ project.html|safe }}
+</div>
+
+<div class="techbox cf">
+    <h2 class="techused">Filed under:</h3>
+        <ul class="tags">
+            {% for tag in project.tags %} {% with name=tag %} {% include 'tag.html' %} {% endwith %} {% endfor %}
+        </ul>
+</div>
+
+{% endblock %}

@@ -4,14 +4,12 @@
 
     {% block head %}
 
-
-
     <meta name="description" content="{% block description %}{% endblock %} - Jack Brookes">
 
     <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='me_circ.png') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,300i,400i,700i|Open+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i|Roboto+Mono:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
 
@@ -27,31 +25,44 @@
     {% endblock %}
   </head>
   <body>
-    <div id="centred-container">
-      <ul id="navbar">
-        <li class="navbutton"><a href="{{url_for('home')}}" {% if current_page == 'Home' %}class="current"{% endif %}>Home</a></li>
-        <li class="navbutton"><a href="{{url_for('posts')}}" {% if current_page == 'Posts' %}class="current"{% endif %}>Posts</a></li>
-        <li class="navbutton"><a href="{{url_for('publications')}}" {% if current_page == 'Publications' %}class="current"{% endif %}>Publications</a></li>
-        <li class="navbutton"><a href="{{url_for('about')}}" {% if current_page == 'About' %}class="current"{% endif %}>About</a></li>
-        <li class="navbutton"><a href="{{url_for('contact')}}" {% if current_page == 'Contact' %}class="current"{% endif %}>Contact</a></li>
-        <li id="spacer">&nbsp;</li>
+    <div id="navbar-container" class="mobile-padded">
+      <ul id="navbar" class="mobile-centered">
+        <li class="navbutton">
+          <a href="{{url_for('home')}}" {% if current_page=='Home' %}class="sweep current" {% endif %} class="sweep">Home</a>
+        </li>
+        <li class="navbutton">
+          <a href="{{url_for('projects')}}" {% if current_page=='Projects' %}class="sweep current" {% endif %} class="sweep">Projects</a>
+        </li>
+        <li class="navbutton">
+          <a href="{{url_for('posts')}}" {% if current_page=='Posts' %}class="sweep current" {% endif %} class="sweep">Posts</a>
+        </li>
+        <li class="navbutton">
+          <a href="{{url_for('publications')}}" {% if current_page=='Publications' %}class="sweep current" {% endif %} class="sweep">Publications</a>
+        </li>
+        <li class="navbutton">
+          <a href="{{url_for('about')}}" {% if current_page=='About' %}class="sweep current" {% endif %} class="sweep">About</a>
+        </li>
+        <li class="navbutton">
+          <a href="{{url_for('contact')}}" {% if current_page=='Contact' %}class="sweep current" {% endif %} class="sweep">Contact</a>
+        </li>
+      
       </ul>
-      <div id="content">
-        {% block content %}{% endblock %}
+    </div>
+    <div id="centred-container">
+      <div id="main">
+        <div id="content">
+          {% block content %}{% endblock %}
+        </div>
       </div>
+    </div>
 
     </div>
     <div id="footer-container">
-      <div id="footer">
+      <div id="footer" class="mobile-centered">
         {% block footer %}
         <ul class="footer-ul">
-          <li style="color: #8AB3CF; margin-bottom: 5px;">© Jack Brookes {{ year }}</li>
-          <li><a href="{{url_for('home')}}">Home</a></li>
-          <li><a href="{{url_for('posts')}}">Posts</a></li>
-          <li><a href="{{url_for('publications')}}">Publications</a></li>
-          <li><a href="{{url_for('about')}}">About</a></li>
-          <li><a href="{{url_for('contact')}}">Contact</a></li>
-          <li><a onclick="topFunction()" style="cursor:pointer">Back to top <i class="fa fa-fw fa-chevron-up" aria-hidden="true"></i></a></li>
+          <li> <i class="fa fa-copyright" aria-hidden="true"></i> Jack Brookes {{ year }}</li>
+          <li><a onclick="topFunction()" style="cursor:pointer">Back to top <i class="fa fa-fw fa-long-arrow-up" aria-hidden="true"></i></a></li>
         </ul>
         {% endblock %}
       </div>

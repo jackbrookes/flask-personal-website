@@ -5,18 +5,21 @@ import json
 import math
 from flask import Flask, render_template, render_template_string,\
                   Markup, current_app, \
-                  url_for
+                  url_for, redirect
 from flask_flatpages import FlatPages, pygments_style_defs
 from flask_flatpages.utils import pygmented_markdown
 
+
 cfd = os.path.dirname(os.path.realpath(__file__))
 POST_DIR = 'posts'
+PROJECT_DIR = 'projects'
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
 flatpages = FlatPages(app)
 
 with open(os.path.join(cfd, 'tagmap.json')) as json_data:
     tag_map = json.load(json_data)
+
 
 # custom jinja functions
 @app.context_processor
@@ -53,7 +56,7 @@ def utility_processor():
 
 @app.route('/pygments.css')
 def pygments_css():
-    return pygments_style_defs('friendly'), 200, {'Content-Type': 'text/css'}
+    return pygments_style_defs('vs'), 200, {'Content-Type': 'text/css'}
 
 def prerender_jinja(text):
     prerendered_body = render_template_string(Markup(text))
@@ -63,33 +66,57 @@ app.config['FLATPAGES_HTML_RENDERER'] = prerender_jinja
 
 @app.route("/")
 def home():
-    posts, _ = get_posts(6, pinned_only = True)
+    posts, _ = get_items(POST_DIR, 6, pinned_only=True)
+    projects, _ = get_items(PROJECT_DIR, 4, pinned_only=True)
+
     return render_template('home.html',
-                           posts = posts,
+                           posts=posts,
+                           projects=projects,
                            current_page='Home')
 
 @app.route("/me/")
 def me():
-    return render_template('me.html')
+    return redirect(url_for("about"))
+
 
 @app.route("/posts/", defaults={'pagenum': 1})
 @app.route("/posts/page/<pagenum>/")
 def posts(pagenum):
-    posts, maxpages = get_posts(8, page = int(pagenum))
-
+    items, maxpages = get_items(POST_DIR, 12, page=int(pagenum))
     return render_template('posts.html',
-                           posts=posts,
-                           current_page='Posts',
-                           pagenum = int(pagenum),
-                           maxpages = maxpages)
+                            posts=items,
+                            current_page='Posts',
+                            pagenum=int(pagenum),
+                            maxpages=maxpages)
 
 @app.route('/posts/<name>/')
 def post(name):
     path = '{}/{}'.format(POST_DIR, name)
-    post = flatpages.get_or_404(path)
+    item = flatpages.get_or_404(path)
     return render_template('post.html',
-                           post=post,
-                           current_page='Posts')
+                            post=item,
+                            current_page='Posts')
+
+
+@app.route("/projects/", defaults={'pagenum': 1})
+@app.route("/projects/page/<pagenum>/")
+def projects(pagenum):
+    items, maxpages = get_items(PROJECT_DIR, 8, page=int(pagenum))
+    items.sort(key=lambda x: x['pin_rank'], reverse=True)
+    return render_template('projects.html',
+                            projects=items,
+                            current_page='Projects',
+                            pagenum=int(pagenum),
+                            maxpages=maxpages)
+
+
+@app.route('/projects/<name>/')
+def project(name):
+    path = '{}/{}'.format(PROJECT_DIR, name)
+    item = flatpages.get_or_404(path)
+    return render_template('project.html',
+                            project=item,
+                            current_page='Projects')
 
 @app.route('/about/')
 def about():
@@ -112,28 +139,27 @@ def publications():
 def st():
     return ""
 
-
 @app.route('/favicon.ico')
 def favicon():
     return url_for('static', filename='me_circ.png')
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found(err):
     return render_template('404.html'), 404
 
 
-def get_posts(limit, pinned_only = False, page = 1):
-    posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
+def get_items(pattern, limit, pinned_only=False, page=1):
+    items = [p for p in flatpages if p.path.startswith(pattern)]
     if pinned_only:
-        posts = [p for p in posts if 'pin_rank' in p.meta]
-        posts.sort(key=lambda item:item['pin_rank'], reverse=True)
+        items = [p for p in items if 'pin_rank' in p.meta]
+        items.sort(key=lambda x: x['pin_rank'], reverse=True)
     else:
-        posts.sort(key=lambda item:item['date'], reverse=True)
+        items.sort(key=lambda item: item['date'], reverse=True)
     first = (page - 1) * limit
     last = first + limit
-    maxpages = math.ceil(len(posts) / limit)
-    posts = posts[first:last]
-    return posts, maxpages
+    maxpages = math.ceil(len(items) / limit)
+    items = items[first:last]
+    return items, maxpages
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug=True)

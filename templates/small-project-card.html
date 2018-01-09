@@ -1,0 +1,7 @@
+<a {% if project.meta_image is defined %} style="background-image: url('{{ url_for('static', filename=project.meta_image) }}');"{% endif %}
+    class="project-card sweepparent"
+    href="{{ url_for('project', name=project.path.replace('projects/', '')) }}">
+    <div class="project sweepchild">
+        {{ project.title }}
+    </div>
+</a>

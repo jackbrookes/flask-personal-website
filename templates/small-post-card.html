@@ -1,17 +1,6 @@
-<div class="post-card">
-  <span class="post" href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
+<a class="post-card sweep" href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
+  {% if not front_page %}<span class="postdate">{{post.date}}</span>{% endif %}
+  <span class="post">
     {{ post.title }}
-  </span>
-
-  <p class="small">
-    {{ post.short_description }}
-  </p>
-
-  <ul class="tags horizontal">
-    {% for tag in post['tags'] %}
-      {% with name = tag %}
-        {% include 'tag.html' %}
-      {% endwith %}
-    {% endfor %}
-  </ul>
-</div>
+  </span>{{ post.short_description }}
+</a>

@@ -9,28 +9,46 @@ html {overflow-y: scroll}
 html, body { margin: 0; padding: 0; height: 100%;}
 
 body {
-  font-family: 'Merriweather', serif;
-  color: rgb(55, 55, 55);
+  font-family: 'Roboto', sans-serif;
+  color: #333 ;
 }
 
 p.about{
-  font-family: 'Merriweather', serif;
-  font-weight: 400;
-  font-size: 20;
+  font-size: 32px !important;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 700;
+  font-style: oblique;
+  padding: 40px;
+  margin: 10px -10px;
+  background-color: #333;
+  color: white;
 }
 
 .sep{
-  color: #ccc;
+  color: #333;
   padding: 0 10px;
 }
 
+code {
+  font-family: 'Roboto Mono', monospace;
+  background: #eee;
+  padding: 0.25em 0.4em;
+  margin: 0;
+  font-size: 85%;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin-top: 2em;
 }
 
 a:visited, a:link{
-  color: inherit;
+  color: #333;
 }
 
 .intrinsic-container {
@@ -62,25 +80,59 @@ ul, ol {
   line-height: 1.5;
 }
 
+a.sweep, .sweepchild{
+  text-decoration: none;
+  background: linear-gradient(to bottom right, #fff 50%, #333 50%);
+  background-size: 200% 300%;
+  background-position:left top;
+}
+
+a.sweep:hover, a.sweepparent:hover > .sweepchild, a.sweepparent:hover > * > .sweepchild {
+  background-position: right bottom;
+  color: #fff;
+  transition: all .25s ease-in;
+}
+
+
 ul#navbar {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
+  font-family: 'Roboto mono', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
   list-style-type: none;
-  padding: 25px 0px 25px 0px;
-  margin: 0;
   overflow: hidden;
   width: 100%;
+  border: #333 2px solid;
+  background-color: white;
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  left: 40px;
+  top: 20px;
+  max-width: 420px;
+  box-shadow: -40px -22px cyan;
 }
 
-li.navbutton a, ul#navbar li#spacer{
+li.navbutton a{
   display: block;
   text-align: center;
-  padding: 14px 16px;
-  border-bottom: solid #ccc 1px;
+  padding: 8px 18px;
+  border: solid 5px white;
+  float: left;
 }
 
-li.navbutton a {
-  float: left;
+li.navbutton a:before, li.navbutton a:after{
+  content: none;
+}
+
+li.navbutton a.current {
+   padding: 8px 14px;
+}
+
+li.navbutton a.current:before {
+  content: '[' !important;  
+}
+li.navbutton a.current:after {
+  content: ']' !important; 
 }
 
 ul#navbar li#spacer {
@@ -91,57 +143,43 @@ ul#navbar li#spacer {
 li.navbutton a{
   width: auto;
   height: auto;
-  text-decoration: none;
-  color: #777;
-}
-
-li.navbutton a:hover, li.navbutton a.current{
-
-  border-bottom: solid #4180AB 4px;
-  padding-bottom: 11px;
-
-}
-
-li.navbutton a:hover{
-  color: #4180AB;
-  transition: all .15s ease-in-out;
 }
 
 a.download{
-  display: inline-block;
-  font-weight: 700;
-  padding: 1.5em;
+  position: relative;
+  margin: 20px auto;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
+  padding: 16px 24px;
+  text-align: center;
   text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
-  color: #333;
-  border: solid #ccc 1px;
-}
-
-a.download:hover{
-  background-color: #f0f0f0;
+  font-weight: 700;
+  font-family: 'Roboto Mono', sans-serif;
+  border: solid #333 2px;
 }
 
 .pagenums{
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
   text-align: center;
 }
 
 a.pagination, .pagenum{
+  text-transform: uppercase;
   display: inline-block;
   margin: 1em 0.5em;
-  padding: 0.7em 1.2em;
+  padding: 12px 20px;
   text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  color: #333;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 700;
+  border: solid #333 2px;
+
 }
-a.pagination{
-    border: solid #ccc 1px;
+
+.pagenum{
+  background-color: #333;
+  color:white;
 }
-a.pagination:hover {
-  background-color: #f0f0f0;
-}
+
 
 a.caption{
   display: block;
@@ -151,7 +189,7 @@ a.caption{
   padding: 5px 10px;
   text-align: right;
   color: #777;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
 }
 a.caption:hover{
   background-color: #ccc;
@@ -160,20 +198,19 @@ a.caption:hover{
 a.seemore{
   display: block;
   position: relative;
-  width: 90px;
+  width: 100px;
   margin: 10px auto;
   text-decoration: none;
   font-size: 14px;
   padding: 8px 12px;
   text-align: center;
-  color: #333;
+  text-transform: uppercase;
   content: "See more";
-  font-family: 'Open Sans', sans-serif;
-  border: solid #ccc 1px;
+  font-weight: 700;
+  font-family: 'Roboto Mono', sans-serif;
+  border: solid #333 2px;
 }
-a.seemore:hover{
-  background-color: #f0f0f0;
-}
+
 
 
 #profile-card-container{
@@ -211,18 +248,26 @@ img.profile-card-pic{
 }
 
 
+
 #centred-container{
   margin: 0 auto;
-  max-width: 720px;
+  max-width: 640px;
   min-width: 320px;
   min-height: 100%;
-  padding-bottom: 260px;
+  padding-top: 180px;
+  bottom: 100px;
+  padding-bottom: 150px;
 }
 
-#content{
-  overflow:auto;
-  padding-bottom: 30px;
-  overflow-x: hidden;
+#main{
+  margin: -70px -110px;
+  padding: 70px 110px;
+  border: solid #333 2px;
+  box-shadow: 40px 40px lightgray;
+}
+
+.inner-card {
+  margin: 0 10px;
 }
 
 pre {
@@ -244,12 +289,57 @@ pre {
   display: block;
 }
 
-.post{
-  text-decoration: none;
-  height: 21px;
+
+a.post-card{
   display: block;
-  overflow: elipsis;
+  text-decoration: none;
+  padding: 8px 10px;
+  margin: 16px -10px;
+}
+
+a.project-card{
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  display: block;
+  padding-top: 40%;
+  background-color: rgb(0, 255, 255);
+  width: 100%;
+  text-decoration: none;
+  position: relative;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.post{
+  font-family: 'Roboto Mono', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
   font-weight: 700;
+  padding-right: 0.5em;
+  height: 40px;
+}
+
+.project-banner {
+  width: calc(100% + 160px);
+  max-height:600px;
+  display: block;
+  margin: -40px -80px 30px -80px;
+}
+
+.project-banner + h1.title {
+  margin-top: 15px;
+}
+
+.project{
+  display: inline-block;
+  font-family: 'Roboto Mono', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 8px 14px;
+  margin: 0px 20px;
+  position: absolute;
+  bottom: 17px;
 }
 
 .card{
@@ -278,7 +368,7 @@ pre {
 h2 {
   margin: 25px 0 20px 0;
   padding-bottom: 6px;
-  border-bottom: solid 1px #f0f0f0;
+  border-bottom: solid 2px #333;
 }
 
 h2 a{
@@ -316,21 +406,36 @@ ul.contact li a{
 }
 
 ul.tags li{
-  /*display: inline-block;*/
   margin: 1px 0;
   font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
+
+.postdate {
+  display: inline-block;
+  font-weight: 700;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+.postdate:before {
+  content: '[';
+}
+
+.postdate:after {
+  content: ']';
+  padding-right: 0.5em;
+}
+
 
 h2.techused{
   font-size: 16px;
-  margin: 0 0 7px 0;
+  margin: 0 0 4px 0;
+  border: none;
 }
 
 .techbox{
-  background-color: #f8f8f8;
-  padding: 10px;
-  margin: 25px 0;
+  padding: 10px 0;
+  margin: 45px 0 0 0;
 }
 
 .techbox ul li{
@@ -339,8 +444,6 @@ h2.techused{
 }
 
 ul.horizontal{
-  height: 25px;
-  min-width: 100%;
   overflow: hidden;
 }
 
@@ -355,9 +458,6 @@ ul.tags a{
   text-decoration: none;
 }
 
-ul.tags li a {
-  color: #111;
-}
 
 ul.tags li span{
   vertical-align: middle;
@@ -371,59 +471,37 @@ img.tag-icon{
   overflow: hidden;
 }
 
-.post-card{
-  font-family: 'Open Sans', sans-serif;
-  width: calc(50% - 10px);
-  float: left;
-  border: solid #ccc 1px;
-  padding: 14px 12px 30px 12px;
-  margin: 10px 0;
-  height: 160px;
-}
-
-.post-card:hover{
-  border-bottom: solid #4180AB 4px;
-  padding-bottom: 10px;
-  transition: all .15s ease-in-out;
-}
-
-a:nth-of-type(2n+1) .post-card{
-  margin-left: 0;
-  margin-right: 10px;
-}
-a:nth-of-type(2n) .post-card{
-  margin-left: 10px;
-  margin-right: 0;
-}
-
 h1.title{
-  margin: 15px 0;
+  margin: 20px 40px 40px 0;
+  background-color: #333;
+  color:white;
+  padding: 12px 24px;
+  line-height: 1.2;
+  box-shadow: 42px 12px yellow;
 }
 
 p.small{
-  font-size: 13px !important;
+  font-size: 14px !important;
   overflow: hidden;
-  font-style: italic;
-  height: 65px;
-  font-weight: 400;
-  color: #333;
+  margin: 8px 0px;
+  overflow: elipsis;
 }
 
 p.summary{
   margin-top: 0;
   margin-bottom: 10px;
-  font-style: italic;
-  font-weight: 400;
 }
 
 p.date{
   margin-top:0;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   text-transform: uppercase;
-  font-size: 12px !important;
-  color: #777;
-  font-family: 'Open Sans', sans-serif;
-
+  font-size: 14px !important;
+  color: #333;
+  font-family: 'Roboto Mono', sans-serif;
+}
+p.date:before{
+  content: "Posted: "
 }
 
 a.github{
@@ -435,65 +513,80 @@ a.github{
 }
 
 a.github:hover{
-  color: #4180AB;
+text-decoration: underline;
 }
 
-.arrow:after, a.arrow::after{
-  padding-left: 0.3em;
-  font-size: 0.8em;
-  content: ">";
-  opacity: 0.7;
+.arrow:before {
+  padding-right: 0.5em;
+  content: "//";
 }
 
 #footer-container{
+  font-family: 'Roboto mono', sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
-  padding: 20px 0;
-  background-color: #E4EBF0;
-  color: #4180AB;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
-
+  margin-top: -100px; /* negative value of footer height */
+  height: 100px;
   position: relative;
-  margin-top: -260px; /* negative value of footer height */
-  height: 260px;
 }
 
 #footer{
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 720px;
+  position: absolute;
+  border: solid 2px #333;
+  background-color: white;
+  bottom: 20px;
+  right: 40px;
+  max-width: 280px;
+  box-shadow: 40px 20px magenta;
 }
 
 ul.footer-ul {
   list-style-type: none;
-  padding: 0;
+  padding: 10px 18px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+
 }
+
 
 ul.footer-ul li{
-  padding: 5px 0;
-}
-
-ul.footer-ul li a{
   text-decoration: none;
+  margin: 8px;
 }
 
 ul.footer-ul li a:hover{
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 900px) {
+  #main {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .project-banner {
+    width: 100%;
+    margin: 0;
+  }
+
+}
+
 @media only screen and (max-width: 650px) {
 
-  ul#navbar {
-    padding-top: 0px;
+  .mobile-padded {
+    padding: 10px;
   }
 
-  #content{
-    margin-bottom: 40px;
+  #content {
+    padding: 0 5px;
   }
 
-  #content, #footer {
-    padding: 0 15px;
+  #centred-container {
+    padding-top: 0;
+    min-height: 0;
   }
 
 
@@ -501,19 +594,22 @@ ul.footer-ul li a:hover{
     font-size: 16px;
   }
 
-  .post-card{
-    width: calc(100% - 10px);
-  }
-
-
-  a:nth-of-type(2n) .post-card, a:nth-of-type(2n+1) .post-card{
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
+ 
   .techbox{
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  
+  .mobile-centered{
+    position: relative !important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    bottom: auto!important;
+    top: auto!important;
+    left: auto!important;
+    right: auto!important;
+
   }
 
 }
@@ -538,10 +634,12 @@ ul.footer-ul li a:hover{
   #content p, #content .card p{
     font-size: 14px;
   }
+
+
 }
 
 @media only screen and (max-width: 320px) {
-  #footer-container{
+  #footer-container, #navbar-container{
     width: 320px;
   }
 }

@@ -6,17 +6,11 @@ tags:
   - VR
 short_description: >
   Virtual reality musical physics-based sandbox game, made in Unity, free and open source
-pin_rank: 45
+pin_rank: 30
 github_link: https://github.com/jackbrookes/bouncebeat
 meta_image: blog-images/bouncebeat-logo.png
 
-{% from 'macros.html' import vimeo %}
-{{ vimeo('223177181') }}
-
 ## Information
-
-![BounceBeat logo]({{ url_for('static', filename='blog-images/bouncebeat-logo.png') }})
-
 
 I've been recently hacked together a new VR game. Its a musical sandbox game,
 the idea is you can place "Spawners" in the world which will output beads. These
@@ -24,6 +18,9 @@ beads will make a sound when they hit a "BouncePad", the pitch of the sound bein
 dependent on the velocity. You can create as many as you like and move them around,
 and theoretically create complex songs if you chain together sounds by changing the
 tempo and instrument of the sounds.
+
+{% from 'macros.html' import vimeo %}
+{{ vimeo('223177181') }}
 
 * You can spawn objects by picking them up from your wrists
 * You can snap objects rotationally using the index finger trigger

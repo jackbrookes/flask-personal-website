@@ -2,9 +2,12 @@ title: Simodont Custom Model Builder GUI
 date: 2017-09-17
 tags:
   - Python
+pin_rank: 10
 short_description: >
   A user friendly Python 3 application for developing models for use in the
   Simodont VR dental simulator.
+meta_image: blog-images/smb-banner.png
+
 
 *Note: This software is not in any way affiliated with MOOG.*
 

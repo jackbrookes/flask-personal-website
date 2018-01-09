@@ -1,0 +1,10 @@
+<div class="card cf">
+    <h2 class="section-title">
+        {% if current_page == "Publications"%} Publications {% else %}
+        <a class="arrow" href="{{ url_for('about')}}">Publications</a>
+        {% endif %}
+    </h2>
+    <div class="inner-card">
+    {{ publications_page.html|safe }}
+    </div>
+</div>

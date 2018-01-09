@@ -1,5 +1,5 @@
 <div class="card">
-
+  
   <h2 class="section-title">
     {% if current_page == "About"%}
       About
@@ -8,22 +8,22 @@
     {% endif %}
   </h2>
 
+    <div class="inner-card">
   <p>
     I'm a graduate of Mechanical Engineering, and now a PhD candidate in the area of percpetual science - particularly how haptics and virtual reality can affect motor learning. Some of my interests:
 
     <ul>
       <li> Virtual reality, and the challenges and opportunities it brings (technical, perceptual, social, or otherwise) </li>
       <li> Data processing, visualisation and analysis </li>
-      <li> Coding with craftmanship: producing efficient, intuitive, and maintaiable software </li>
+      <li> Coding with craftsmanship: producing efficient, intuitive, and maintainable software </li>
       <li> Design and user experience </li>
     </ul>
   </p>
 
-  <p style="text-align: center">
-
-    <a href="{{url_for("static", filename="jack-brookes-cv.pdf")}}" class="download">
+  <p style="text-align: center; padding-top:1em;">
+    <a href="{{url_for("static", filename="jack-brookes-cv.pdf")}}" class="download sweep" download>
       <i class="fa fa-file-text fa-fw" aria-hidden="true"></i>View CV (.pdf)
     </a>
-
   </p>
+  </div>
 </div>

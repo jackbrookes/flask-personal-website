@@ -1,0 +1,39 @@
+<div class="card cf">
+  <h2 class="section-title">
+    {% if current_page == "Projects"%}
+      Projects
+    {% else %}
+      <a class="arrow" href="{{ url_for('projects')}}">Projects</a>
+    {% endif %}
+  </h2>
+
+  <div class="inner-card">
+    {% for project in projects %}
+        {% include 'small-project-card.html' %}
+    {% endfor %}
+  </div>
+</div>
+
+{% if pagenum %}
+<div class="pagenums">
+  {% if (pagenum - 1) > 0 %}
+    <a
+    href="{{ url_for('projects',  pagenum = pagenum - 1 ) }}"
+    class="pagination"
+    >Prev</a>
+  {% endif %}
+  <span class="pagenum">
+  {{ pagenum }}
+  </span>
+  {% if (pagenum + 1) <= maxpages %}
+  <a
+  href="{{ url_for('projects',  pagenum = pagenum + 1 ) }}"
+  class="pagination"
+  >Next</a>
+  {% endif %}
+</div>
+{% endif %}
+
+{% if front_page %}
+    <a href="{{ url_for('projects')}}" class="seemore sweep">See more</a>
+{% endif %}

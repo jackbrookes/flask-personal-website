@@ -17,30 +17,30 @@
 <h1 class="title">
   {{ post.title }}
 </h1>
+  <div class="inner-card">
+  <p class="date">
+    {{ post.date }}
+  </p>
 
-<p class="date">
-  {{ post.date }}
-</p>
-
-<p class="summary">
-  {{ post.short_description }}
-  {% if post.github_link is defined %}
-    <a class="github arrow" href="{{ post.github_link }}">View on GitHub</a>
-  {% endif %}
-</p>
-
-{{ post.html|safe }}
+  <p class="summary">
+    {{ post.short_description }}
+    {% if post.github_link is defined %}
+      <a class="github" href="{{ post.github_link }}">View on GitHub</a>
+    {% endif %}
+  </p>
+    {{ post.html|safe }}
+  </div>
 
 
-<div class="techbox cf">
-  <h2 class="techused">Post tags:</h3>
-  <ul class="tags">
-    {% for tag in post.tags %}
-      {% with name=tag  %}
-        {% include 'tag.html' %}
-      {% endwith %}
-    {% endfor %}
-  </ul>
+  <div class="techbox cf">
+    <h2 class="techused">Filed under:</h3>
+    <ul class="tags">
+      {% for tag in post.tags %}
+        {% with name=tag  %}
+          {% include 'tag.html' %}
+        {% endwith %}
+      {% endfor %}
+    </ul>
 </div>
 
 {% endblock %}
