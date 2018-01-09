@@ -568,6 +568,25 @@ ul.footer-ul li a:hover{
   text-decoration: underline;
 }
 
+@keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+}
+.blink {
+  animation: blink 1s step-start 0s infinite;
+  -webkit-animation: blink 1s step-start 0s infinite;
+}
+
+.pre-spaced {
+  padding-left: 0.2em;
+}
+
 @media only screen and (max-width: 900px) {
   #main {
     margin: 0;
