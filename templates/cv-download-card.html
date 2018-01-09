@@ -1,29 +1,29 @@
 <div class="card">
-  
-  <h2 class="section-title">
-    {% if current_page == "About"%}
-      About
-    {% else %}
-      <a class="arrow" href="{{ url_for('about')}}">About</a>
-    {% endif %}
+  {% if current_page == "About" %}
+  <h1 class="title">About
+  </h1>
+  {% else %}
+  <h2 class="section-title">About
+    <a class="arrow" href="{{ url_for('about')}}">About</a>
   </h2>
+  {% endif %}
 
-    <div class="inner-card">
-  <p>
-    I'm a graduate of Mechanical Engineering, and now a PhD candidate in the area of percpetual science - particularly how haptics and virtual reality can affect motor learning. Some of my interests:
+  <div class="inner-card">
+    <p>
+      I'm a graduate of Mechanical Engineering, and now a PhD candidate in the area of perceptual science - particularly how haptics
+      and virtual reality can affect motor learning. Some of my interests:
+      <ul>
+        <li> Virtual reality, and the challenges and opportunities it brings (technical, perceptual, social, or otherwise) </li>
+        <li> Data processing, visualisation and analysis </li>
+        <li> Coding with craftsmanship: producing efficient, intuitive, and maintainable software </li>
+        <li> Design and user experience </li>
+      </ul>
+    </p>
 
-    <ul>
-      <li> Virtual reality, and the challenges and opportunities it brings (technical, perceptual, social, or otherwise) </li>
-      <li> Data processing, visualisation and analysis </li>
-      <li> Coding with craftsmanship: producing efficient, intuitive, and maintainable software </li>
-      <li> Design and user experience </li>
-    </ul>
-  </p>
-
-  <p style="text-align: center; padding-top:1em;">
-    <a href="{{url_for("static", filename="jack-brookes-cv.pdf")}}" class="download sweep" download>
-      <i class="fa fa-file-text fa-fw" aria-hidden="true"></i>View CV (.pdf)
-    </a>
-  </p>
+    <p style="text-align: center; padding-top:1em;">
+      <a href="{{url_for('static', filename="jack-brookes-cv.pdf ")}}" class="download sweep" download>
+        <i class="fa fa-file-text fa-fw" aria-hidden="true"></i>View CV (.pdf)
+      </a>
+    </p>
   </div>
 </div>

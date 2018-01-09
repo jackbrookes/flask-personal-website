@@ -1,12 +1,11 @@
-## Publications
 
-### Journal articles
+## Journal articles
 *(several in progress)*
 
-### Conference proceedings
+## Conference proceedings
 * **J. Brookes**, M. Kuznecovs, M. Kanakis, A. Grigals, M. Narvidas, J. Gallagher, M. Levesley, *"Robots testing robots: ALAN-Arm, a humanoid arm for the testing of robotic rehabilitation systems"* 2017 International Conference on Rehabilitation Robotics (ICORR), London, 2017, pp. 676-681. <http://doi.org/10.1109/ICORR.2017.8009326>
 
-### Presentations
+## Presentations
 
 * *"Information and sensorimotor learning"*. UCL Neuroimaging Lab Meeting, November 2017
 * *"Virtual Reality in sensorimotor learning research"*. Accelerating the impact of sensorimotor learning research (EPS Conference), Leeds, July 2017

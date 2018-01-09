@@ -1,11 +1,12 @@
 <div class="card cf">
+   {% if current_page == "Projects"%}
+  <h1 class="title">Projects
+  </h1>
+  {% else %}
   <h2 class="section-title">
-    {% if current_page == "Projects"%}
-      Projects
-    {% else %}
-      <a class="arrow" href="{{ url_for('projects')}}">Projects</a>
-    {% endif %}
+    <a class="arrow" href="{{ url_for('projects')}}">Projects</a>
   </h2>
+  {% endif %}
 
   <div class="inner-card">
     {% for project in projects %}

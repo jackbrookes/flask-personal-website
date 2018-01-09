@@ -185,10 +185,10 @@ a.caption{
   display: block;
   text-decoration: none;
   font-size: 14px;
-  background-color: #f8f8f8;
+  background-color: #333;
   padding: 5px 10px;
   text-align: right;
-  color: #777;
+  color: white;
   font-family: 'Roboto Mono', sans-serif;
 }
 a.caption:hover{
@@ -214,8 +214,9 @@ a.seemore{
 
 
 #profile-card-container{
-  margin: 20px auto 15px auto;
-  max-width: 370px;
+  margin: auto auto;
+  max-width: 420px;
+  padding: 10% 0;
 }
 
 #p5-container{
@@ -225,12 +226,15 @@ a.seemore{
 
 img.profile-card-pic{
   float: left;
-  max-width: 110px;
+  max-width: 160px;
 }
 
 #profile-card-infobox{
   overflow: hidden;
-  padding: 10px 15px;
+  padding: 10px 25px;
+  font-family: 'Roboto Mono', sans-serif;
+  text-transform: uppercase;
+  color: white;
 }
 
 .profile-card-name, .profile-card-subtitle{
@@ -320,14 +324,18 @@ a.project-card{
   height: 40px;
 }
 
-.project-banner {
+.me-banner {
+  background-color: blue;
+}
+
+img.project-banner, .me-banner {
   width: calc(100% + 160px);
   max-height:600px;
   display: block;
   margin: -40px -80px 30px -80px;
 }
 
-.project-banner + h1.title {
+img.project-banner + h1.title, .me-banner + h1.title {
   margin-top: 15px;
 }
 
@@ -463,7 +471,7 @@ ul.tags li span{
   vertical-align: middle;
 }
 
-img.tag-icon{
+img.tag-icon {
   vertical-align: middle;
   width: 16px;
   height: 16px;
@@ -475,7 +483,7 @@ h1.title{
   margin: 20px 40px 40px 0;
   background-color: #333;
   color:white;
-  padding: 12px 24px;
+  padding: 11px 24px 12px 24px;
   line-height: 1.2;
   box-shadow: 42px 12px yellow;
 }
@@ -567,7 +575,7 @@ ul.footer-ul li a:hover{
     border: none;
     box-shadow: none;
   }
-  .project-banner {
+  img.project-banner, .me-banner {
     width: 100%;
     margin: 0;
   }
@@ -621,6 +629,7 @@ ul.footer-ul li a:hover{
 
   img.profile-card-pic{
     float: none;
+    max-width: 100px;
   }
 
   h1#profile-card-name{

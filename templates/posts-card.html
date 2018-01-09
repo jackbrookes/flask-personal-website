@@ -1,11 +1,12 @@
 <div class="card cf">
-  <h2 class="section-title">
-    {% if current_page == "Posts"%}
-      Posts
-    {% else %}
-      <a class="arrow" href="{{ url_for('posts')}}">Posts</a>
-    {% endif %}
+  {% if current_page == "Posts"%}
+  <h1 class="title">Posts
+  </h1>
+  {% else %}
+  <h2 class="section-title">    
+    <a class="arrow" href="{{ url_for('posts')}}">Posts</a>
   </h2>
+  {% endif %}
 
   <div class="inner-card">
     {% for post in posts %}
