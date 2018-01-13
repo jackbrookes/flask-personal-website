@@ -8,7 +8,7 @@ short_description: >
   Winning the worldwide NI Student Competition and presenting at NI Week 2016
   in Austin, TX.
 pin_rank: 5
-meta_image: blog-images/project-alan.png
+meta_image: blog-images/alan-banner.png
 
 [NI Community Page](https://decibel.ni.com/content/docs/DOC-46580)
 
