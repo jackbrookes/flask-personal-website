@@ -43,7 +43,7 @@ Robotic rehabilitation devices are often developed in a research setting, and un
 * Implementation of master-slave control scheme where the shoulder and elbow are driven by hand/wrist position 
 * PID tuning for the 3 robots
 * Partial programming of FPGA controller
-* Implementation of communication with Unity3D game
+* Implementation of communication with a Unity3D game
 * Thorough testing of path reproducibility and frequency response
 
 ## Result
