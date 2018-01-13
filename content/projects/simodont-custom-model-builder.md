@@ -23,20 +23,24 @@ The SMB is a piece of software I developed in Python. It has been designed to be
 *Above: Screenshot of the Simodont model builder GUI. Here we see a noise layer, masked with a cross shape (from a bitmap), overlaid on a rainbow bitmap applied to the top view.*
 
 The image above is annotated to highlight the main features of the application:
+
 A.	Model viewer – allows the user to view the models they are creating from the top, front or right side. This is done in such a way to replicate third angle orthographic projection, a commonly used standard for representing 3D objects in 2D.
 B.	Model viewer controls – allows for manipulation of the way the data is displayed in the three views. The channel selector at the top changes which channel of data is currently displayed in the model viewer. The sliders are linked to the colour-coded dashed lines, which indicate the 2D ‘slice’ of voxels currently displayed. A slider for the zoom level can magnify of the views.
 C.	Model settings and information – Allows the user to change the model name, model size and voxel size.
 D.	Generators – Mini-programs used to generate data for use in the model. When clicked, the generator launches its own mini-application with its own settings and interface. See Generators section.
 E.	Layers – When data is created using a generator, it creates a layer. Layers are composited on top of each other, from bottom to top, a common feature in creative software suites such as photoshop. Here we can delete and reorder layers, and can change the opacity, and the blend mode of the layers – which determines how the layer data interacts with the data in the layers below.
+
 After the user creates a model, they can output the model into a .zip file containing all the necessary files for the Simodont systems, no files need to be manually edited. The generated zip file can then be uploaded to the Simodont system for use in research or education.
 
 ## Generators
 
 Within the data for a model include the colour of each voxel, as well as the density of the voxel. Generators are mini-applications which create these data in whichever way they wish, which are then converted into a layer.
 Currently, three generators are implemented, which allow for building basic models:
+
 1.	Bitmap – Generates data from a 2D image. Images will be resized and stacked in a selected direction to make them three-dimensional.
 2.	Noise – Generates 3D fractal noise using a perlin noise algorithm. Many parameters can be changed including the feature size and min/max value.
 3.	Solid – Generates data based on a user selectable solid colour that is used for all voxels in the ‘color’ channel.
+
 The Generator system is designed to be fundamentally flexible. In the future, if a researcher cannot create a model that suits their needs using the above tools alone, creating a new generator is a relatively simple task. If a newly created generator found is installed and passes validation checks a new button for that generator will appear.  An example of where this functionality may be if in the future there is a need to generate a realistic looking 3D tooth object. An algorithm that generates the necessary structure and converts it into voxels could be packaged in a generator, making the software a platform for development simple 3D data generation algorithms.
 
 ## Layering system
