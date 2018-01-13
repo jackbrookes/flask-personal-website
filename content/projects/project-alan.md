@@ -5,8 +5,7 @@ tags:
   - Engineering
   - LabVIEW
 short_description: >
-  Winning the worldwide NI Student Competition and presenting at NI Week 2016
-  in Austin, TX.
+  A project on developing tools to help make commercial rehabilitation robots viable.
 pin_rank: 5
 meta_image: blog-images/alan-banner.png
 
