@@ -37,3 +37,6 @@ tempo and instrument of the sounds.
 You can download the latest build zip file [here](https://github.com/jackbrookes/bouncebeat/releases)
 
 And view the source code [on GitHub](https://github.com/jackbrookes/bouncebeat)
+
+Also on WEARVR
+(https://www.wearvr.com/apps/bouncebeat)
