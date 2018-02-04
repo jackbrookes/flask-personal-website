@@ -162,4 +162,4 @@ def get_items(pattern, limit, pinned_only=False, page=1):
     return items, maxpages
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host='192.168.0.10')

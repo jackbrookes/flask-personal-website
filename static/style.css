@@ -82,13 +82,16 @@ ul, ol {
 
 a.sweep, .sweepchild{
   text-decoration: none;
-  background: linear-gradient(to bottom right, #fff 50%, #333 50%);
-  background-size: 200% 300%;
-  background-position:left top;
+  background: linear-gradient(to bottom right,
+   #fff 40%, #ff0 40%,
+   #ff0 50%, #f0f 50%,
+   #f0f 60%, #333 60%);
+  background-size: 275% 275%;
+  background-position:1% 1%;
 }
 
 a.sweep:hover, a.sweepparent:hover > .sweepchild, a.sweepparent:hover > * > .sweepchild {
-  background-position: right bottom;
+  background-position: 99% 99%;
   color: #fff;
   transition: all .25s ease-in;
 }
@@ -116,7 +119,7 @@ li.navbutton a{
   display: block;
   text-align: center;
   padding: 8px 18px;
-  border: solid 5px white;
+  margin: 5px;
   float: left;
 }
 
@@ -146,8 +149,9 @@ li.navbutton a{
 }
 
 a.download{
+  display: inline-block;
   position: relative;
-  margin: 20px auto;
+  margin: 5px auto;
   text-decoration: none;
   font-size: 18px;
   padding: 16px 24px;
