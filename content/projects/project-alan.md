@@ -7,7 +7,7 @@ tags:
 short_description: >
   A project on developing tools to help make commercial rehabilitation robots viable.
 pin_rank: 5
-meta_image: blog-images/alan-banner.png
+meta_image: blog-images/alan-banner.jpg
 
 [NI Community Page](https://decibel.ni.com/content/docs/DOC-46580)
 
