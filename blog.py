@@ -66,7 +66,7 @@ app.config['FLATPAGES_HTML_RENDERER'] = prerender_jinja
 
 @app.route("/")
 def home():
-    posts, _ = get_items(POST_DIR, 6)
+    posts, _ = get_items(POST_DIR, 4)
     projects, _ = get_items(PROJECT_DIR, 3)
 
     return render_template('home.html',
