@@ -66,8 +66,8 @@ app.config['FLATPAGES_HTML_RENDERER'] = prerender_jinja
 
 @app.route("/")
 def home():
-    posts, _ = get_items(POST_DIR, 6, pinned_only=True)
-    projects, _ = get_items(PROJECT_DIR, 4, pinned_only=True)
+    posts, _ = get_items(POST_DIR, 6)
+    projects, _ = get_items(PROJECT_DIR, 3)
 
     return render_template('home.html',
                            posts=posts,
@@ -148,13 +148,9 @@ def page_not_found(err):
     return render_template('404.html'), 404
 
 
-def get_items(pattern, limit, pinned_only=False, page=1):
+def get_items(pattern, limit, page=1):
     items = [p for p in flatpages if p.path.startswith(pattern)]
-    if pinned_only:
-        items = [p for p in items if 'pin_rank' in p.meta]
-        items.sort(key=lambda x: x['pin_rank'], reverse=True)
-    else:
-        items.sort(key=lambda item: item['date'], reverse=True)
+    items.sort(key=lambda item: item['date'], reverse=True)
     first = (page - 1) * limit
     last = first + limit
     maxpages = math.ceil(len(items) / limit)

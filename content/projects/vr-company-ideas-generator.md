@@ -6,8 +6,8 @@ tags:
   - JavaScript
 short_description: >
   Generates random, but plausible, VR company ideas.
-pin_rank: 5
-meta_image: blog-images/vr-company-ideas-generator.jpg
+pin_rank: 7
+meta_image: blog-images/vr-company-ideas-generator.png
 
 ## Virtual Reality Company Idea Generator
 

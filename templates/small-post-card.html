@@ -1,5 +1,5 @@
 <a class="post-card sweep" href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
-  {% if not front_page %}<span class="postdate">{{post.date}}</span>{% endif %}
+  <span class="postdate">{{post.date}}</span>
   <span class="post">
     {{ post.title }}
   </span>{{ post.short_description }}
