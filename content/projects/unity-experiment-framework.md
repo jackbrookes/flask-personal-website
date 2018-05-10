@@ -1,4 +1,4 @@
-title: Unity Experiment Framework - 
+title: UXF - Unity Experiment Framework 
 date: 2017-10-01
 tags:
   - Unity
@@ -6,7 +6,7 @@ tags:
   - VR
 short_description: >
   A set of C# scripts which simplifies management of human-based experiments developed in Unity.
-github_link: https://github.com/jackbrookes/unity-experiment-framework
+github_link: https://github.com/jackbrookes/uxf-unity-experiment-framework
 pin_rank: 30
 meta_image: blog-images/uxf-banner.png
 
