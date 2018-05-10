@@ -1,4 +1,4 @@
-title: ExpMngr - Experiment Manager for Unity
+title: Unity Experiment Framework - 
 date: 2017-10-01
 tags:
   - Unity
@@ -6,9 +6,9 @@ tags:
   - VR
 short_description: >
   A set of C# scripts which simplifies management of human-based experiments developed in Unity.
-github_link: https://github.com/jackbrookes/unity-experiment-manager
+github_link: https://github.com/jackbrookes/unity-experiment-framework
 pin_rank: 30
-meta_image: blog-images/expmngr-banner.png
+meta_image: blog-images/uxf-banner.png
 
 This is a beefed-up version of my more simple [CSV logger](/posts/unity-csv-logger-for-experiments/) package I previously released, focusing on doing the difficult management of different stages of an experiment that are usually cumbersome. It also crucially allows for multithreaded File I/O which is especially important in VR applications where we can not afford for frame times to exceed the target.
 
@@ -25,7 +25,7 @@ This is a beefed-up version of my more simple [CSV logger](/posts/unity-csv-logg
 
 ## UI Screenshot
 
-![User interface]({{ url_for('static', filename='blog-images/expmngr-ss.png') }})
+![User interface]({{ url_for('static', filename='blog-images/uxf-ss.png') }})
 
 ## Example
 
