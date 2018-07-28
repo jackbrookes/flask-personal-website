@@ -31,13 +31,7 @@
           <a href="{{url_for('home')}}" {% if current_page=='Home' %}class="sweep current" {% endif %} class="sweep">Home</a>
         </li>
         <li class="navbutton">
-          <a href="{{url_for('projects')}}" {% if current_page=='Projects' %}class="sweep current" {% endif %} class="sweep">Projects</a>
-        </li>
-        <li class="navbutton">
-          <a href="{{url_for('posts')}}" {% if current_page=='Posts' %}class="sweep current" {% endif %} class="sweep">Posts</a>
-        </li>
-        <li class="navbutton">
-          <a href="{{url_for('publications')}}" {% if current_page=='Publications' %}class="sweep current" {% endif %} class="sweep">Publications</a>
+          <a href="{{url_for('mywork')}}" {% if current_page=='My work' %}class="sweep current" {% endif %} class="sweep">My work</a>
         </li>
         <li class="navbutton">
           <a href="{{url_for('about')}}" {% if current_page=='About' %}class="sweep current" {% endif %} class="sweep">About</a>

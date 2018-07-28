@@ -128,12 +128,12 @@ def contact():
     return render_template('contact.html',
                            current_page='Contact')
 
-@app.route('/publications/')
-def publications():
-    pub = flatpages.get_or_404("publications")
-    return render_template('publications.html',
-                           current_page='Publications',
-                           publications_page=pub)
+@app.route('/my-work/')
+def mywork():
+    mwp = flatpages.get_or_404("my-work")
+    return render_template('my-work.html',
+                           current_page='My work',
+                           mywork_page=mwp)
 
 @app.route('/static/')
 def st():

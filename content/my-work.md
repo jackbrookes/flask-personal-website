@@ -1,4 +1,12 @@
 
+## Software portfolio
+
+* My open sourced work can be found at my [GitHub](http://github.com/jackbrookes) page
+
+## Awards
+
+* National Instruments World Student Design Competition winner (2016) 
+
 ## Journal articles
 *(several in progress)*
 
@@ -7,6 +15,8 @@
 
 ## Presentations
 
+* *"Transforming the study of human behaviour using Virtual Reality"*, University of Leeds Research Nights 3, May 2018
+* *"Virtual Reality as a tool for human behaviour research"*, Visual Media Conference, March 2018
 * *"Virtual Reality in Human Movement Research"*. Leeds University Robotics Showcase, January 2018
 * *"Information and sensorimotor learning"*. UCL Neuroimaging Lab Meeting, November 2017
 * *"Virtual Reality in sensorimotor learning research"*. Accelerating the impact of sensorimotor learning research (EPS Conference), Leeds, July 2017

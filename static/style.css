@@ -82,18 +82,12 @@ ul, ol {
 
 a.sweep, .sweepchild{
   text-decoration: none;
-  background: linear-gradient(to bottom right,
-   #fff 40%, #ff0 40%,
-   #ff0 50%, #f0f 50%,
-   #f0f 60%, #333 60%);
-  background-size: 275% 275%;
-  background-position:1% 1%;
+  background-color: none;
 }
 
 a.sweep:hover, a.sweepparent:hover > .sweepchild, a.sweepparent:hover > * > .sweepchild {
-  background-position: 99% 99%;
   color: #fff;
-  transition: all .25s ease-in;
+  background-color: #333;
 }
 
 
@@ -111,7 +105,7 @@ ul#navbar {
   position: absolute;
   left: 40px;
   top: 20px;
-  max-width: 420px;
+  max-width: 250px;
   box-shadow: -40px -22px cyan;
 }
 

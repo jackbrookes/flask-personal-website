@@ -1,0 +1,14 @@
+<div class="card cf">
+    {% if current_page == "My work"%}
+    <h1 class="title">My work
+    </h1>
+    {% else %}
+    <h2 class="section-title">
+        <a class="arrow" href="{{ url_for('mywork')}}">My work</a>
+    </h2>
+    {% endif %}
+    
+    <div class="inner-card">
+    {{ mywork_page.html|safe }}
+    </div>
+</div>
