@@ -1,9 +1,0 @@
-{% macro vimeo(id, width=640, height=321) -%}
-  <div class="intrinsic-container intrinsic-container-16x9">
-    <iframe src="https://player.vimeo.com/video/{{ id }}"
-    width="{{ width }}"
-    height="{{ height }}"
-    webkitallowfullscreen mozallowfullscreen allowfullscreen>
-    </iframe>
-  </div>
-{%- endmacro %}

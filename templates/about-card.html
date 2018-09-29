@@ -1,6 +1,6 @@
 <div class="card">
   {% if current_page == "About"%}
-  <h1 class="maintitle">About
+  <h1 class="title">About
   </h1>
   {% else %}
   <h2 class="section-title">
@@ -10,8 +10,6 @@
   {% endif %}
 
   <div class="inner-card">
-    <p class="about">
-      VR enthusiast, engineer, and perceptual science PhD candidate.
-    </p>
+  {{ about_html|safe }}
   </div>
 </div>
