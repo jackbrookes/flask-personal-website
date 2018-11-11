@@ -4,10 +4,11 @@ My open sourced work can be found at my [GitHub](http://github.com/jackbrookes).
 
 Highlights:
 
-* [Unity Experiment Framework](https://github.com/jackbrookes/unity-experiment-framework) - Framework for human behaviour experiments in Unity
+* [Unity Experiment Framework](/unity-experiment-framework) - Framework for human behaviour experiments in Unity
 * [BounceBeat](https://github.com/jackbrookes/bouncebeat) - VR musical physics sandbox game made in Unity
 * [Unnamed, unfinished game](https://github.com/jackbrookes/vr-graph-intersection) - VR puzzle game where the goal is to create faces from nodes that do not create intersections in a 3D graph
 * [Eyeballs VR Demo](https://github.com/jackbrookes/eyeballs-vr-demo) - VR demo made in Unity that allows you to detach your eyes from your head.
+* [Active StackOverflow user](https://stackoverflow.com/users/5024009/jack-brookes)
 
 ## Awards
 
