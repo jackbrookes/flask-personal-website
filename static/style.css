@@ -637,6 +637,11 @@ ul.footer-ul li a:hover{
 
   }
 
+  ul#navbar{
+    position: relative;
+    margin-bottom: 30px;
+  }
+
 }
 
 @media only screen and (max-width: 420px) {

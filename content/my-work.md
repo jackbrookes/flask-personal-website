@@ -4,7 +4,7 @@ My open sourced work can be found at my [GitHub](http://github.com/jackbrookes).
 
 Highlights:
 
-* [Unity Experiment Framework](/unity-experiment-framework) - Framework for human behaviour experiments in Unity
+* [Unity Experiment Framework](http://immersivecognition.github.io/unity-experiment-framework) - Framework for human behaviour experiments in Unity
 * [BounceBeat](https://github.com/jackbrookes/bouncebeat) - VR musical physics sandbox game made in Unity
 * [Unnamed, unfinished game](https://github.com/jackbrookes/vr-graph-intersection) - VR puzzle game where the goal is to create faces from nodes that do not create intersections in a 3D graph
 * [Eyeballs VR Demo](https://github.com/jackbrookes/eyeballs-vr-demo) - VR demo made in Unity that allows you to detach your eyes from your head.
@@ -16,7 +16,9 @@ Highlights:
 
 ## PUBLISHED WORK
 
-* **J. Brookes**, M. Kuznecovs, M. Kanakis, A. Grigals, M. Narvidas, J. Gallagher, M. Levesley, *"Robots testing robots: ALAN-Arm, a humanoid arm for the testing of robotic rehabilitation systems"* 2017 International Conference on Rehabilitation Robotics (ICORR), London, 2017, pp. 676-681. <http://doi.org/10.1109/ICORR.2017.8009326>
+* **J. Brookes**, M. Warburton, M. Alghadier, F. Mushtaq, M. Mon-Williams, *Studying Human Behaviour with Virtual Reality: The Unity Experiment Framework* (preprint), bioRxiv 459339. <https://doi.org/10.1101/459339>
+, 
+* **J. Brookes**, M. Kuznecovs, M. Kanakis, A. Grigals, M. Narvidas, J. Gallagher, M. Levesley; *"Robots testing robots: ALAN-Arm, a humanoid arm for the testing of robotic rehabilitation systems"*; 2017 International Conference on Rehabilitation Robotics (ICORR), London, 2017; pp. 676-681. <http://doi.org/10.1109/ICORR.2017.8009326>
 
 ## Presentations
 
