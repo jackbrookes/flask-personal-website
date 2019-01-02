@@ -4,7 +4,9 @@ My open sourced work can be found at my [GitHub](http://github.com/jackbrookes).
 
 Highlights:
 
-* [Unity Experiment Framework](http://immersivecognition.github.io/unity-experiment-framework) - Framework for human behaviour experiments in Unity
+* [Unity Experiment Framework (UXF)](http://immersivecognition.github.io/unity-experiment-framework) - Framework for human behaviour experiments in Unity
+  * [UXF Web Settings](https://github.com/jackbrookes/uxf-web-settings) - Unity package that allows experiments built in UXF to read their settings from the web rather than locally.
+  * [UXF S3 Uploader](https://github.com/jackbrookes/uxf-s3-uploader) - Unity package that allows experiments built in UXF to upload their files to an Amazon Web Services S3 bucket.
 * [BounceBeat](https://github.com/jackbrookes/bouncebeat) - VR musical physics sandbox game made in Unity
 * [Unnamed, unfinished game](https://github.com/jackbrookes/vr-graph-intersection) - VR puzzle game where the goal is to create faces from nodes that do not create intersections in a 3D graph
 * [Eyeballs VR Demo](https://github.com/jackbrookes/eyeballs-vr-demo) - VR demo made in Unity that allows you to detach your eyes from your head.
