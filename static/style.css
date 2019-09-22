@@ -284,13 +284,26 @@ pre {
   line-height: 1.6;
 }
 
-#content p img {
+#content p img, #content p video {
   max-width:100%;
   max-height:1500px;
   margin: auto;
   display: block;
 }
 
+p.noimage {
+  margin: auto;
+  display: block;
+  position: relative;
+  margin: 5px auto;
+  text-decoration: none;
+  font-size: 14px !important;
+  padding: 16px 24px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Roboto Mono', sans-serif;
+}
 
 a.post-card{
   display: block;
