@@ -11,7 +11,7 @@ Highlights:
 * [BounceBeat](https://github.com/jackbrookes/bouncebeat) - VR musical physics sandbox game made in Unity.
 * [Unnamed, unfinished game](https://github.com/jackbrookes/vr-graph-intersection) - VR puzzle game where the goal is to create faces from nodes that do not create intersections in a 3D graph.
 * [Eyeballs VR Demo](https://github.com/jackbrookes/eyeballs-vr-demo) - VR demo made in Unity that allows you to detach your eyes from your head.
-* [Active StackOverflow user](https://stackoverflow.com/users/5025009/jack-brookes)
+* [Active StackOverflow user](https://stackoverflow.com/users/5024009/jack-brookes)
 
 ## Unity experiments
 
@@ -58,7 +58,7 @@ Reach-to-grasp behaviours have been studied for decades, but only recently VR ha
 
 ### Haptic Handwriting
 
-Handwriting is an important life skill, but many children underperform. Here I developed a simple handwriting task that allows children to virtually practice handwriting with haptic interventions that potentially improve learning rate. The Unity application communicates to a Phantom Omni haptic pen system. We tested this in a primary school, which was then features on the BBC Inside Out program.
+Handwriting is an important life skill, but many children underperform. Here I developed a simple handwriting task that allows children to virtually practice handwriting with haptic interventions that potentially improve learning rate. The Unity application communicates to a Phantom Omni haptic pen system. We tested this in a primary school, which was then featured on the BBC Inside Out program.
 
 <img src="/static/image/handwriting.png" width="500"/>
 
