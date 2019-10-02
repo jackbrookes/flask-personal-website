@@ -13,15 +13,22 @@ body {
   color: #333 ;
 }
 
-p.about{
+.about{
   font-size: 32px !important;
+  position: relative;
   font-family: 'Roboto Mono', sans-serif;
   font-weight: 700;
   font-style: oblique;
-  padding: 40px;
+  padding: 40px 40px 190px 40px;
   margin: 10px -10px;
   background-color: #333;
   color: white;
+}
+
+#sketch-holder {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .sep{
@@ -248,8 +255,6 @@ img.profile-card-pic{
   margin: 7px 0;
   font-size: 24px;
 }
-
-
 
 #centred-container{
   margin: 0 auto;
