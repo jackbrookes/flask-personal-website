@@ -54,8 +54,10 @@ In my PhD I study how different types of errors (selection error, movement error
 
 Reach-to-grasp behaviours have been studied for decades, but only recently VR has allowed new experiments to be created. Here, we examine the effects of removing haptics or vision of the hand when reaching for an object using the VR experiment I developed.
 
-<p class="noimage">No image :(</p>
-
+<video controls width="500" muted>
+  <source src="/static/image/prehension-vr.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
 ### Haptic Handwriting
 
 Handwriting is an important life skill, but many children underperform. Here I developed a simple handwriting task that allows children to virtually practice handwriting with haptic interventions that potentially improve learning rate. The Unity application communicates to a Phantom Omni haptic pen system. We tested this in a primary school, which was then featured on the BBC Inside Out program.
