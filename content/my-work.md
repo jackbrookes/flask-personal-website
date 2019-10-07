@@ -93,6 +93,6 @@ A common motor learning experiment paradigm involves applying a transformation t
 Memorising a pair of objects, and then recalling the second object after being prompted with the first, is a common way of measuring memory. I developed a VR version of this task, which uses realistic 3D objects rather than the classic image or word based tests in an attempt to be more ecologically valid. We use this task to examine the effects of sleep interventions on memory performance.
 
 <video controls width="500" muted>
-  <source src="/static/image/paired-associates-vr.mp4" type="video/mp4">
+  <source src="/static/image/paired-associates.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
