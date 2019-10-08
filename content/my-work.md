@@ -34,7 +34,7 @@ Here we present participants with a series of choices between two objects. These
 
 ### Postural sway assessment tool
 
-This task measures the participant's head position across three conditions: vision, no vision, and the oscillating room intervention. VR here these manipulations easy, and allows researchers to examine the participants ability to use vision to adjust balance. This project is available free & [open source](https://github.com/immersivecognition/posture-assessment-vr). 
+This task measures the participant's head position across three conditions: vision, no vision, and the oscillating room intervention. VR makes these manipulations easy, and allows researchers to examine the participants ability to use vision to adjust balance. This project is available free & [open source](https://github.com/immersivecognition/posture-assessment-vr). 
 
 <video controls width="500" muted>
   <source src="/static/image/sway.mp4" type="video/mp4">
