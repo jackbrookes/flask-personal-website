@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
 
     {% block head %}
 
@@ -12,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i|Roboto+Mono:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <meta name="twitter:card" content="summary" />           
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@jackbrookes" />
     <meta name="twitter:title" content="{{ self.title() }}" />
     <meta name="twitter:description" content="{{ self.description() }} - Jack Brookes" />
@@ -23,53 +24,68 @@
     <title>{% block title %}{% endblock %} - Jack Brookes</title>
 
     {% endblock %}
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="navbar-container" class="mobile-padded">
-      <ul id="navbar">
-        <li class="navbutton">
-          <a href="{{url_for('home')}}" {% if current_page=='Home' %}class="sweep current" {% endif %} class="sweep">Home</a>
-        </li>
-        <li class="navbutton">
-          <a href="{{url_for('mywork')}}" {% if current_page=='My work' %}class="sweep current" {% endif %} class="sweep">My work</a>
-        </li>
-        <li class="navbutton">
-          <a href="{{url_for('about')}}" {% if current_page=='About' %}class="sweep current" {% endif %} class="sweep">About</a>
-        </li>
-        <li class="navbutton">
-          <a href="{{url_for('contact')}}" {% if current_page=='Contact' %}class="sweep current" {% endif %} class="sweep">Contact</a>
-        </li>
-      
-      </ul>
+        <ul id="navbar">
+            <li class="navbutton">
+                <a href="{{url_for('home')}}" {% if current_page=='Home' %}class="sweep current" {% endif %} class="sweep">Home</a>
+            </li>
+            <li class="navbutton">
+                <a href="{{url_for('mywork')}}" {% if current_page=='My work' %}class="sweep current" {% endif %} class="sweep">My work</a>
+            </li>
+            <li class="navbutton">
+                <a href="{{url_for('about')}}" {% if current_page=='About' %}class="sweep current" {% endif %} class="sweep">About</a>
+            </li>
+            <li class="navbutton">
+                <a href="{{url_for('contact')}}" {% if current_page=='Contact' %}class="sweep current" {% endif %} class="sweep">Contact</a>
+            </li>
+
+        </ul>
     </div>
     <div id="centred-container">
-      <div id="main">
-        <div id="content">
-          {% block content %}{% endblock %}
+        <div id="main">
+            <div id="content">
+                {% block content %}{% endblock %}
+            </div>
         </div>
-      </div>
     </div>
 
     </div>
     <div id="footer-container">
-      <div id="footer">
-        {% block footer %}
-        <ul class="footer-ul">
-          <li> <i class="fa fa-copyright" aria-hidden="true"></i> Jack Brookes {{ year }}</li>
-          <li><a onclick="topFunction()" style="cursor:pointer">Back to top <i class="fa fa-fw fa-long-arrow-up" aria-hidden="true"></i></a></li>
-        </ul>
-        {% endblock %}
-      </div>
+        <div id="footer">
+            {% block footer %}
+            <ul class="footer-ul">
+                <li> <i class="fa fa-copyright" aria-hidden="true"></i> Jack Brookes {{ year }}</li>
+                <li><a onclick="topFunction()" style="cursor:pointer">Back to top <i class="fa fa-fw fa-long-arrow-up" aria-hidden="true"></i></a></li>
+            </ul>
+            {% endblock %}
+        </div>
     </div>
 
     <script>
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
 
+    <!-- Default Statcounter code for jbrookes.com http://jbrookes.com -->
+    <script type="text/javascript">
+        var sc_project = 12132297;
+        var sc_invisible = 1;
+        var sc_security = "9e8bf11f";
+        var sc_https = 1;
+        var sc_remove_link = 1;
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><img class="statcounter"
+    src="https://c.statcounter.com/12132297/0/9e8bf11f/1/" alt="Web
+    Analytics"></div></noscript>
+    <!-- End of Statcounter Code -->
 
-  </body>
+</body>
+
 </html>
