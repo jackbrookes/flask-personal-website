@@ -13,9 +13,24 @@ Highlights:
 * [Eyeballs VR Demo](https://github.com/jackbrookes/eyeballs-vr-demo) - VR demo made in Unity that allows you to detach your eyes from your head.
 * [Active StackOverflow user](https://stackoverflow.com/users/5024009/jack-brookes)
 
+In my spare time, I have been working on a small puzzle game in Unity called Isometricism, which toys with the perspective of the player.
+
+<video controls width="500" muted>
+  <source src="/static/image/isometricism.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+## Publications
+
+Up-to-date list available on [Google Scholar](https://scholar.google.com/citations?user=0kwtpyoAAAAJ&hl=en).
+
 ## Unity experiments
 
-During my PhD I have developed several virtual reality experiments to examine human behaviour, mostly in the area of human sensorimotor decision making. All were developed in Unity and most take advantage of my Unity Experiment Framework.
+During my PhD and beyond I have developed several virtual reality experiments to examine human behaviour, mostly in the area of human sensorimotor decision making. All were developed in Unity and most take advantage of Unity Experiment Framework.
+
+### Unreleased project
+
+I am currently working at UCL building a platform for studying human movement within threatening VR scenarios. Alongside building statistical models of cognitive processes, this will allow us to study how humans manage to act so quickly in the face of fear, despite the complexity of the required movements.
 
 ### Interceptive timing
 

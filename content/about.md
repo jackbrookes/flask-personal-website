@@ -1,7 +1,7 @@
-I'm a graduate of Mechanical Engineering, and now a PhD candidate in the area of cognitive science - with a particular interest in the use of VR to study human behaviour. Some of my interests:
+I'm a programmer & researcher at UCL. I have a PhD in the area of cognitive science, where I helped re-ignite the use of VR technologies in science. Specifically, I built software that allowed me to create novel motor decision making experiments to gain insight into how humans learn from errors. Some of my interests:
 
-* The study of human cognition, perception, & action
 * Immersive technologies, and the challenges and opportunities they bring (technical, social, or otherwise)
-* Data processing, visualisation and analysis
 * Coding with craftsmanship: producing efficient, intuitive, and maintainable software
+* The study of human cognition, perception, & action
+* Data processing, modelling, visualisation and analysis
 * Human factors, design and user experience
