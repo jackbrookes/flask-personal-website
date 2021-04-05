@@ -16,6 +16,8 @@ Notable public software:
   Your browser does not support HTML5 video.
 </video>
 
+* [Halo custom gametype scripts](https://github.com/jackbrookes/halo-reach-custom-gametypes) - Collection of my custom scripted gametypes for Halo: Reach, written in a Lua-like language.
+
 ## Publications
 
 Up-to-date list available on [Google Scholar](https://scholar.google.com/citations?user=0kwtpyoAAAAJ&hl=en).
